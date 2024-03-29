@@ -1,0 +1,8 @@
+.logo {
+    position: relative;
+    min-width: 230px;
+    text-align: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    width: 150px;
+    height: 60px;
+}

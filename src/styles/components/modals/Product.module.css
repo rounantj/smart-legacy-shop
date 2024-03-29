@@ -1,0 +1,47 @@
+.product {
+	display: flex;
+	align-items: center;
+	gap: 29px;
+	padding: 12px;
+	border-radius: 5px;
+	background-color: #fff;
+	border: 1px solid var(--light-green);
+	cursor: pointer;
+	opacity: 1;
+	transition: var(--transition);
+}
+
+.product.active {
+	background-color: #dcefe32a;
+	border-color: var(--primary);
+}
+
+.product.disable {
+	opacity: .5;
+}
+
+.thumbnail {
+	flex-shrink: 0;
+	position: relative;
+	width: 53px;
+	height: 46px;
+}
+
+.title {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-bottom: 0;
+	font-size: 1.6rem;
+	font-weight: bold;
+}
+
+.message {
+	color: var(--primary);
+	opacity: 0;
+	transition: var(--transition);
+}
+
+.message.active {
+	opacity: 1;
+}

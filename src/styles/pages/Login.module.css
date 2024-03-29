@@ -1,0 +1,40 @@
+.login {
+	display: flex;
+	min-height: 100vh;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-right: var(--padding-horizontal);
+	padding-left: var(--padding-horizontal);
+}
+
+.login > * {
+	flex-basis: 50%;
+	max-width: 50%;
+}
+
+.container{
+	max-width: 46rem;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.header {
+	text-align: center;
+}
+
+.title {
+	font-size: 3.2rem;
+}
+
+.colImg {
+	background-color: var(--light-green);
+}
+
+.footer {
+	margin-top: 2.2rem;
+	text-align: center;
+}

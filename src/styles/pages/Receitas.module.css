@@ -1,0 +1,67 @@
+.pageReceitas {
+  width: 100%;
+}
+
+.pageTitle {
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.exibindoQtd {
+  font-weight: bold;
+}
+
+.exibindoCategories {
+  font-weight: bold;
+}
+
+.categoryMenu {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.categoryMenu > * {
+  flex: 1;
+}
+
+.receitaList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(317px, 1fr));
+  width: 100%;
+  gap: 16px;
+}
+
+.mainBanner {
+  position: relative;
+  /* padding-top: 16.16%; */
+}
+
+@media (max-width: 991px) {
+  .categoryMenu {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .mainBanner {
+    padding-top: 40.86%;
+  }
+
+  .exibindo {
+    display: none;
+  }
+
+  .pageTitle {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 2.1rem;
+    font-size: 2.1rem;
+  }
+
+  .pageTitle i {
+    display: flex;
+    align-items: center;
+  }
+}

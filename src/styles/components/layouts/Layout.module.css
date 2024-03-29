@@ -1,0 +1,34 @@
+.layout {
+	margin-top: 84px;
+  background-color: var(--light-gray);
+}
+
+.layoutBody {
+  display: flex;
+  padding-top: 20px;
+  /* padding-right: 25px; */
+  /* padding-left: 25px; */
+  padding-bottom: 16px;
+}
+
+.main {
+  display: block;
+  width: 100%;
+  padding-left: 16px;
+}
+
+@media (max-width: 991px) {
+  .layout {
+    margin-top: 0;
+    padding-bottom: 142px;
+  }
+
+  .container {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .main {
+    padding-left: 0;
+  }
+}

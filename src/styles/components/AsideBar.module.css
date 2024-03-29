@@ -1,0 +1,89 @@
+.aside {
+  position: sticky;
+  top: 104px;
+  height: fit-content;
+  padding-bottom: 20px;
+  width: min(247px, 100%);
+  flex-basis: min(247px, 100%);
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: var(--gray);
+  z-index: 1;
+
+}
+
+.asideHeader {
+  margin-bottom: 30px;
+  padding-left: 15px;
+}
+.asideIcon{
+  width: 25px;
+  height: 25px;
+  position: relative;
+
+}
+
+.asideHeader a {
+	color: var(--gray);
+}
+
+.asideHeader a:hover {
+	color: var(--primary);
+}
+
+.asideMenu .menuList {
+  padding: 0;
+}
+
+.asideMenu .menuItem {
+  display: flex;
+  gap: 9px;
+  width: calc(100% + 5px);
+  padding-top: 10px;
+  padding-left: 5px;
+  padding-bottom: 10px;
+  list-style: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.asideMenu .menuItem  imf:hover {
+  background-color: transparent;
+}
+.asideMenu .menuItem:hover {
+  background-color: transparent;
+}
+
+.asideMenu .menuItem:hover .menuItemName {
+  color: var(--primary);
+}
+
+.asideMenu .menuItem .modalMenuItem {
+  opacity: 0;
+  visibility: hidden;
+
+}
+
+.asideMenu .menuItem:hover .modalMenuItem {
+  opacity: 1;
+  visibility: visible;
+}
+
+.asideMenu .menuItem:hover .asideIcon img {
+  fill: red;
+  color: red;
+
+  /*filter: invert(68%) sepia(7%) saturate(6049%) hue-rotate(100deg) brightness(107%) contrast(57%);*/
+}
+
+.asideMiniBanner {
+  height: 80px;
+}
+
+@media (max-width: 991px) {
+  .aside {
+    display: none;
+  }
+}

@@ -1,0 +1,100 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 13px;
+  color: #6b6b6b;
+}
+
+.breadcrumbs .separator {
+  position: relative;
+}
+
+.breadcrumbs .separator::before {
+  content: ">";
+  display: block;
+  color: #b4b4b4;
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  margin-bottom: 20px;
+}
+
+.containerInner {
+  max-width: 720px;
+}
+
+.video {
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.banner {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 175px;
+  background-color: var(--light-green);
+  background-image: url(/images/nossos-cuidados/banner-nossos-cuidados.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.banner2 {
+  width: 100%;
+  height: 250px;
+	margin-top: 30px;
+  background-color: var(--light-green);
+  background-image: url(/images/nossos-cuidados/banner-nossos-cuidados-2.png);
+  background-position: center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  box-shadow: 0px 2px 10px #6a6a6a26;
+  border-radius: 5px;
+}
+
+.lojaList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(317px, 1fr));
+  gap: 23px;
+  margin-top: 20px;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 991px) {
+  .breadcrumbs {
+    display: none;
+  }
+
+  .pageTitle {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 2.1rem;
+    font-size: 2.1rem;
+    border: 0;
+  }
+
+  .pageTitle i {
+    display: flex;
+    align-items: center;
+  }
+
+  .container, .containerInner, .containerBanner2, .lojaList {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}

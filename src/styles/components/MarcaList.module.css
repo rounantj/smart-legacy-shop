@@ -1,0 +1,18 @@
+.checkboxList{
+	display: grid;
+	grid-template-columns: repeat( auto-fit, minmax(230px, 1fr) );
+	gap: 10px;
+	padding-right: 26px;
+	padding-left: 26px;
+	max-height: 100px;
+	overflow-y: auto;
+}
+
+.checkboxList::-webkit-scrollbar {
+	width: 15px;
+}
+
+.checkboxList > * {
+	max-width: 230px;
+	width: 100%;
+}

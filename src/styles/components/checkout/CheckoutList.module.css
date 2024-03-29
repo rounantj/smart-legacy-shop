@@ -1,0 +1,18 @@
+.checkoutList {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding-right: 18px;
+	max-height: 380px;
+	overflow: auto;
+}
+
+.checkoutList::-webkit-scrollbar {
+	width: 7px;
+}
+
+@media (max-width: 991px) {
+	.checkoutList {
+		padding-right: 0;
+	}
+}

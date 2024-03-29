@@ -1,0 +1,214 @@
+.footer {
+	color: var(--dark-gray);
+	background-color: #fff;
+}
+
+.banner {
+	background-color: var(--light-green);
+    background-image: var(--banner-footer);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    min-height: 200px;
+    padding-top: 50px;
+}
+
+.banner .boxImg {
+	position: relative;
+	height: 100%;
+	min-height: 140px;
+}
+
+.bannerTitle {
+	font-size: 2.7rem;
+	line-height: 1.3em;
+	font-weight: bold;
+	color: var(--primary);
+}
+
+#btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 40px;
+	min-width: 165px;
+	gap: 5px;
+}
+
+.containerMenus {
+	max-width: 983px;
+	margin-left: auto;
+	margin-bottom: 20px;
+}
+
+.institucional {
+	padding-top: 45px;
+	padding-bottom: 22px;
+}
+
+.menuTitle {
+	margin-bottom: 14px;
+	font-size: 1.4rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: var(--dark-gray);
+}
+
+.menu ul {
+	padding: 0;
+}
+
+.menu li {
+	list-style: none;
+}
+
+.menu a {
+	display: block;
+	padding: 5px 0;
+	text-decoration: none;
+	color: var(--dark-gray);
+	transition: var(--transition);
+}
+
+.menu a:hover {
+	color: var(--primary);
+}
+
+.mainContent {
+	margin-top: 20px;
+	border-top: 1px solid rgba(180,180,180,0.35);
+}
+
+.mainContent > * {
+	border-bottom: 1px solid rgba(180,180,180,0.35);
+}
+
+.mercadoOnline {
+	display: flex;
+	align-items: center;
+	gap: 68px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.mercadoOnline > * {
+	flex: 1 0 1;
+}
+
+.mercadoOnlineLogo {
+	width: min(250px, 100%);
+}
+
+.socialContent {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 22px;
+	padding-bottom: 22px;
+}
+
+.downloadMobile {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+
+	font-size: 1.4rem;
+	font-weight: bold;
+	color: var(--dark-gray);
+	text-transform: uppercase;
+}
+
+.downloadMobile .boxImg {
+	position: relative;
+	max-width: 152px;
+	width: 100%;
+	height: 47px;
+	aspect-ratio: 152/47;
+}
+
+.paymentMethods {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 20px;
+	font-size: 1.4rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: var(--dark-gray);
+}
+
+.comunicado {
+	padding-top: 30px;
+	padding-bottom: 10px;
+	font-size: 1.4rem;
+	background-color: #F3F3F3;
+}
+
+.comunicado h3 {
+	color: var(--dark-gray);
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.copyright {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size: 1.6rem;
+	font-weight: lighter;
+}
+
+.copyright h3 {
+	color: var(--dark-gray);
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.copyright .logo {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 15px;
+}
+
+.apps {
+	display: flex;
+	gap: 9px;
+}
+
+@media (max-width: 991px) {
+	.banner {
+		display: none;
+	}
+
+	.mercadoOnline {
+		flex-direction: column;
+		gap: 50px;
+	}
+
+	.downloadMobile {
+		flex-direction: column;
+		gap: 14px;
+		width: 100%;
+		border-bottom: 0;
+	}
+
+	.paymentMethods {
+		flex-direction: column;
+		gap: 15px;
+		width: 100%;
+	}
+
+	.copyright .logo {
+		justify-content: center;
+		gap: 32px;
+		margin-top: 32px;
+	}
+
+	.copyright .logo * {
+		margin: 0;
+	}
+}

@@ -1,0 +1,114 @@
+.content {
+	padding: 26px 50px;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+	padding-bottom: 25px;
+	border-bottom: 1px solid var(--light-green);
+}
+
+.pageTitle {
+	font-size: 2.8rem;
+}
+
+.pageSubTitle{
+	margin-bottom: 20px;
+	font-size: 1.6rem;
+}
+
+.metaList {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.metaItem:not(:last-of-type)::after {
+	content: '\2022';
+	margin-left: 10px;
+}
+
+.body {
+	padding-top: 25px;
+}
+
+.ingredienteList {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	gap: 21px;
+}
+
+.module:not(:last-of-type) {
+	margin-bottom: 25px;
+	padding-bottom: 25px;
+	border-bottom: 1px solid var(--light-green);
+}
+
+.video {
+	margin-bottom: 40px;
+	max-width: 90%;
+	margin: auto;
+}
+
+.video > * {
+	border-radius: 10px;
+}
+
+.modoPreparoList{
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+	padding-left: 0;
+	margin: 0;
+	margin-bottom: 20px;
+	list-style-type: none;
+}
+
+.modoPreparo {
+	display: flex;
+	gap: 10px;
+}
+
+.modoPreparo .number {
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 23px;
+	height: 23px;
+	font-size: 1.4rem;
+	font-weight: bold;
+	color: var(--dark-gray);
+	border: 1px solid var(--dark-gray);
+	border-radius: 100%;
+}
+
+.boxOfertas {
+	margin-top: 40px;
+}
+
+.boxOfertasTitle {
+	text-align: left;
+	font-size: 2.4rem;
+	font-weight: 300;
+	color: var(--dark-gray);
+}
+
+.mainBanner {
+	position: relative;
+	padding-top: 16.16%;
+}
+
+@media (max-width: 991px) {
+	.mainBanner {
+    padding-top: 40.86%;
+  }
+
+	.content {
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+}

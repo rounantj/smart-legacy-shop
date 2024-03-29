@@ -1,0 +1,106 @@
+.searchBar {
+  position: relative;
+  width: 100%;
+  min-height: 4rem;
+  min-width: min(650px, 100%);
+  z-index: 0 !important;
+  font-size: 1.6rem;
+  padding: 1rem 2.2rem;
+  padding-left: 50px;
+  background-color: #fff;
+  z-index: 5555555555555555;
+  border-radius: 20px;
+
+
+}
+
+
+.headerSearch {
+  min-width: 40%;
+}
+
+.searchBarCart {
+  position: relative;
+  width: 100%;
+  min-height: 4rem;
+
+  font-size: 1.6rem;
+  padding: 1rem 2.2rem;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.inputArea input {
+  all: unset;
+  width: 90%;
+  padding-right: 3rem;
+  box-sizing: border-box;
+}
+
+.inputArea2 input {
+  all: unset;
+  width: 95%;
+  padding-right: 3rem;
+  box-sizing: border-box;
+}
+
+.searchBar2 {
+  position: relative;
+  width: 100%;
+  min-height: 4rem;
+  min-width: 36.5%;
+  max-width: 35%;
+  font-size: 1.6rem;
+  padding: 20px 2.2rem 1rem 50px;
+  background-color: #fff;
+  border-radius: 20px;
+  margin-left: 533px;
+  margin-top: 20px;
+  height: 60px;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  right: 2.2rem;
+  color: var(--primary);
+  transform: translateY(-50%);
+}
+
+.myBar {
+  position: absolute;
+  width: 36.5%;
+  min-width: 36.5%;
+  max-width: 35%;
+  top: 65px;
+  left: 533px;
+  border-radius: 0 0 20px 20px;
+  height: auto;
+  padding: 50px 20px 5px;
+  max-height: 800px;
+  overflow-y: auto;
+
+}
+
+.searchResult {
+  margin-left: 10px;
+}
+
+.linkBusca {
+  cursor: pointer;
+}
+
+.linkBusca:hover {
+  color: var(--primary);
+}
+
+@media (max-width: 991px) {
+  .searchBar {
+    padding: 18px 22px;
+    padding-right: 50px;
+  }
+
+  .icon {
+    right: 34px;
+  }
+}

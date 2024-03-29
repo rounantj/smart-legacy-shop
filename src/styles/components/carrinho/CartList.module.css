@@ -1,0 +1,114 @@
+.cartList {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	height: calc(100vh - 200px);
+	padding-right: 20px;
+	overflow-y: auto;
+  }
+  .footerCart {
+	  display: flex;
+	justify-content: space-between;
+	  align-items: center;
+	gap: 6px;
+	padding: 20px 36px;
+	  padding-right: calc(36px + 20px);
+	position: absolute;
+	bottom: 0px;
+	  left: 0;
+	width: 100%;
+	  background-color: var(--light-gray);
+  }
+  .innerText {
+	/* margin: auto; */
+	/* margin: auto 30px auto auto; */
+	display: inline-block;
+  
+	font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300)
+	  16px/21px var(--unnamed-font-family-roboto);
+	letter-spacing: var(--unnamed-character-spacing-0);
+	color: var(--unnamed-color-6a6a6a);
+	text-align: left;
+	font: normal normal 300 16px/21px Roboto;
+	letter-spacing: 0px;
+	color: #6a6a6a;
+	opacity: 1;
+  }
+  .innerSpan {
+	font: var(--unnamed-font-style-normal) normal bold 16px/21px
+	  var(--unnamed-font-family-roboto);
+	letter-spacing: var(--unnamed-character-spacing-0);
+	text-align: left;
+	font: normal normal bold 16px/21px Roboto;
+	letter-spacing: 0px;
+	color: var(--primary);
+	opacity: 1;
+  }
+  
+  .innerBtn {
+	display: inline;
+	max-width: 317px;
+	  width: 100%;
+  }
+  
+  .buttonRefazerPedido {
+	width: 100%;
+	max-width: 317px;
+  }
+  
+  .subtotalText {
+	  margin-right: 9px;
+  }
+  
+  @media (max-width: 991px) {
+	.cartList {
+		  height: auto;
+	  padding-right: 0px;
+	  padding-bottom: 70px;
+	}
+  
+	.subtotalText {
+	  display: none;
+	}
+  
+	.footerCart {
+		  position: fixed;
+	  display: flex;
+	  align-items: center;
+	  justify-content: space-between;
+	  gap: 15px;
+	  bottom: 0;
+	  margin: 0;
+	  padding: 15px;
+	  width: 100%;
+	  background-color: var(--primary);
+	}
+  
+	.footerCart .innerText {
+	  margin: unset;
+	  flex-shrink: 0;
+	}
+  
+	.footerCart .innerSpan {
+	  color: #fff;
+	}
+  
+	.footerCart .innerBtn {
+	  margin: 0;
+	  width: 100%;
+	  max-width: 100%;
+	}
+  
+	.buttonRefazerPedido {
+		  display: block;
+	  min-width: min(227px, 100%);
+	  min-height: 40px;
+		  width: auto;
+		  padding-right: 8px;
+		  padding-left: 8px;
+		  margin-left: auto;
+	  border-radius: 20px;
+	  background-color: var(--light-green);
+	}
+  }
+  

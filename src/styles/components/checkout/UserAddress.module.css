@@ -1,0 +1,18 @@
+.address {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+.addressIcon {
+	flex-shrink: 0;
+}
+
+.addressName {
+	font-size: 1.6rem;
+	font-weight: bold;
+}
+
+.addressText {
+	font-weight: 300;
+}

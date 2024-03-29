@@ -1,0 +1,287 @@
+.main {
+	padding-top: 156px;
+}
+
+.pageHeader {
+	margin-bottom: 27px;
+	text-align: center;
+}
+
+.pageTitle {
+	font-weight: bold;
+}
+
+.checkIcon svg {
+	width: 45px;
+	height: 45px;
+}
+.tituloSmart{
+	font: var(--unnamed-font-style-normal) normal bold 16px/21px var(--unnamed-font-family-roboto);
+letter-spacing: var(--unnamed-character-spacing-0);
+text-align: left;
+font: normal normal bold 16px/21px Roboto;
+letter-spacing: 0px;
+color: var(--primary);
+opacity: 1;
+}
+.model-page-interna {
+    margin-top: 9px;
+    border-radius: 10px;
+    background-color: #fff;
+      -webkit-box-shadow: none !important;
+     box-shadow: none !important;
+    overflow: hidden;
+    width: 100%;
+}
+
+.checkIconComun{
+	width: 25px;
+	height: 25px;
+}
+.iconSmart{
+	width: 45px;
+	height: 45px;
+	background: #99D4AE 0% 0% no-repeat padding-box;
+	opacity: 0.11;
+	border-radius: 100%;
+}
+.checkIconRounded{
+	width: 83px;
+    height: 83px;
+    background: #f3faf6 0 0 no-repeat padding-box;
+    opacity: 1;
+    border-radius: 100%;
+    display: block;
+    margin: auto;
+	padding: 18px;
+}
+.checkIconRounded svg{
+	width: 45px;
+    height: 45px;
+    margin: auto;
+    display: block;
+}
+.tituloInfo{
+	font: var(--unnamed-font-style-normal) normal bold 16px/21px var(--unnamed-font-family-roboto);
+	letter-spacing: var(--unnamed-character-spacing-0);
+	text-align: center;
+	font: normal normal bold 16px/21px Roboto;
+	letter-spacing: 0px;
+	color: #333333;
+	opacity: 1;
+}
+.subTituloPedido{
+	font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300) 16px/21px var(--unnamed-font-family-roboto);
+	letter-spacing: var(--unnamed-character-spacing-0);
+	color: var(--unnamed-color-6a6a6a);
+	text-align: center;
+	font: normal normal 300 16px/21px Roboto;
+	letter-spacing: 0px;
+	color: #6A6A6A;
+	opacity: 1;
+}
+.spanSubTitulo{
+	font: var(--unnamed-font-style-normal) normal bold 16px/21px var(--unnamed-font-family-roboto);
+	letter-spacing: var(--unnamed-character-spacing-0);
+	text-align: center;
+	font: normal normal bold 16px/21px Roboto;
+	letter-spacing: 0px;
+	color: #333333;
+	opacity: 1;
+}
+
+.containerInner {
+	max-width: 490px;
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+.headerInner {
+	border-bottom: 1px solid #EDEDED;
+}
+
+.body {
+	display: flex;
+	justify-content: center;
+	padding: 25px;
+}
+
+.checklistBox {
+	display: flex;
+	flex-direction: column;
+}
+
+.checklistTitle {
+	margin-bottom: 12px;
+	font-size: 1.6rem;
+	color: #025562;
+}
+
+.checklist {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.checklist .item {
+	display: flex;
+	align-items: center;
+	gap: 7px;
+	color: var(--gray);
+}
+
+.sectionPedidoInfo {
+	padding-top: 138px;
+	padding-bottom: 194px;
+}
+
+.sectionPedidoInfoContainer{
+	max-width: 690px;
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid #edf2f6;
+    border-radius: 16px;
+}
+
+.contentBox {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.contentBox:not(:last-child) {
+	margin-bottom: 20px;
+}
+
+.contentBoxBody {
+	display: flex;
+	flex-direction: column;
+}
+
+.contentBoxBody p {
+	margin-bottom: 0;
+	font-size: 1.4rem;
+	line-height: 1.9rem;
+	color: #687C97;
+}
+
+
+.contentBoxBody p.contentBoxValue {
+	font-size: 1.8rem;
+	font-weight: bold;
+	line-height: 2.4rem;
+	color: var(--black);
+}
+
+.contentBoxValue .entregaInfos {
+	padding: 2px 10px;
+	font-size: 1.4rem;
+	font-weight: 400;
+	line-height: 1.9rem;
+	color: #687C97;
+	border-radius: 100px;
+	background-color: var(--light-gray);
+}
+
+.contentBox .icon, .userInfoIcon {
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	width: 49px;
+	height: 49px;
+	border-radius: 100%;
+	background-color: #F9FAFB;
+}
+
+.userInfoIcon {
+	width: 40px;
+	height: 40px;
+}
+
+.contentBox .icon:not(.iconDolar) svg path {
+	fill: #687C96;
+}
+
+.contentBox .icon.iconFlip {
+	transform: scaleX(-1);
+}
+
+.userInfos {
+	padding: 15px;
+	border-radius: 16px;
+	border: 1px solid #EDF2F6;
+}
+
+.userInfoBox {
+	display: flex;
+	align-items: center;
+	gap: 9px;
+	margin-left: auto;
+	color: #222B45;
+	font-size: 1.4rem;
+	font-weight: 400;
+}
+
+.userInfoBox:not(:last-child) {
+	margin-bottom: 9px;
+}
+
+.userInfosHeader {
+	padding-bottom: 9px;
+	margin-bottom: 11px;
+	border-bottom: 1px solid #EDF2F6;
+}
+
+.userInfoBox > * {
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.userInfoButton {
+	display: block;
+	min-height: 39px;
+	margin: 0 auto;
+	font-weight: 400;
+	font-size: 1.4rem;
+	color: var(--primary);
+	border-radius: 20px;
+	border: 1px solid var(--primary);
+	background-color: transparent;
+}
+
+.userInfoButton:hover {
+	color: #fff;
+	background-color: var(--primary);
+}
+
+@media (max-width: 991px) {
+	.main {
+		padding-top: 27px;
+		padding-bottom: 44px;
+	}
+
+	.pageTitle {
+		margin-bottom: 3rem;
+		font-size: 2.8rem;
+	}
+
+	.modelPageInterna {
+		box-shadow: unset;
+	}
+
+	.modelPageInterna .row {
+		gap: 20px;
+	}
+
+	.sectionPedidoInfo {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+}

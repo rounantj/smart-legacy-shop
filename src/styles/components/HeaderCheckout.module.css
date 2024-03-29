@@ -1,0 +1,28 @@
+.header {
+	width: 100%;
+	padding: 1rem var(--main-padding-horizontal);
+	color: #fff;
+	background-color: var(--primary);
+	z-index: 9;
+}
+
+.header::before {
+	content: '';
+	position: relative;
+}
+
+.headerContent {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+}
+
+.boxNumeroPedido {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	font-weight: 100;
+	transform: translateY(-50%);
+}

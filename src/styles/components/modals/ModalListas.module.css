@@ -1,0 +1,287 @@
+.modalListas {
+  --modal-height: calc(100% - 40px);
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-height: var(--modal-height);
+  background-color: #fff;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10 !important;
+}
+.modalListasCookie {
+  --modal-height: calc(100% - 40px);
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-height: var(--modal-height);
+  background-color: #fff;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10 !important;
+  padding: 20px;
+}
+
+
+
+
+.modalTitle {
+  --modal-border-radius: 25px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-right: 30px;
+  padding-left: 30px;
+  color: var(--primary);
+  border-top-left-radius: var(--modal-border-radius);
+  background-color: var(--secondary);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  padding: 18px;
+}
+
+.btnClose {
+	margin-top: auto;
+	margin-bottom: auto;
+  margin-right: 60px;
+}
+
+.lista {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  height: 100%;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.modalActive {
+  pointer-events: unset;
+  opacity: 1;
+  box-shadow: 0px 0px 10px var(--primary);
+}
+
+.modalDica {
+	position: absolute;
+	top: -12px;
+	left: 0;
+	width: 100%;
+	height: auto;
+	padding: 10px;
+	color: var(--dark-gray);
+	font-size: 1.5rem;
+	line-height: 2rem;
+	letter-spacing: -.2px;
+	border-radius: 5px;
+	background-color: #fff;
+	border: 1px solid var(--primary);
+	transform: translateY(-100%);
+	box-shadow: 0px 3px 10px rgba(106, 106, 106, 0.1);
+}
+
+.modalDica::before, .modalDica::after {
+	content: '';
+	position: absolute;
+	bottom: 1px;
+	left: 50%;
+	width: 31px;
+	height: 9px;
+	clip-path: polygon(100% 0, 0 0, 50% 100%);
+	background-color: #fff;
+	transform: translateX(-50%) translateY(100%);
+	z-index: 1;
+}
+
+.modalDica::after {
+	bottom: 0px;
+	width: 32px;
+	background-color: var(--primary);
+	z-index: 0;
+}
+
+.buttonLista {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 230px;
+  padding: 20px;
+	font-weight: normal;
+  border: 1px solid #ededed;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buttonLista .counter {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.6rem;
+}
+
+.buttonLista .counter::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 16px;
+  width: calc(100% + 6px);
+  aspect-ratio: 1;
+  padding: 4px;
+  border-radius: 100%;
+  background-color: var(--primary);
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.buttonListaTitle {
+  -webkit-line-clamp: 1;
+  /* display: box; */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  white-space: normal;
+	overflow: hidden;
+}
+
+.buttonLista .icon {
+  display: flex;
+  align-items: center;
+  width: 33px;
+  height: 33px;
+  padding: 8px;
+  border-radius: 100%;
+  background-color: var(--secondary);
+}
+
+.buttonCreateLista {
+  border-style: dashed;
+}
+
+.buttonLista.active,
+.buttonCreateLista {
+  color: var(--primary);
+  border-color: var(--primary);
+  background-color: rgba(220, 239, 227, 0.15);
+  font-weight: normal;
+}
+
+.btnAddAnotherList {
+	all: unset;
+	width: 206px;
+	text-align: center;
+	color: var(--primary);
+	font-size: 1.6rem;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .modalListas {
+    flex-direction: column;
+    max-height: unset;
+    height: var(--modal-height);
+  }
+
+  .modalListasCookie {
+    flex-direction: column;
+    max-height: 30vh;
+    min-height: 260px;
+    padding: 20px;
+    height: var(--modal-height);
+  }
+
+  
+ 
+
+  .modalTitle {
+    padding-top: 15px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    font-size: 2.1rem;
+    font-weight: bold;
+    background-color: #fff;
+    border-top-right-radius: var(--modal-border-radius);
+    border-bottom: 1px solid var(--light-gray);
+  }
+
+  .modalDica {
+    max-width: 220px;
+    top: unset;
+    left: 50%;
+    bottom: -12px;
+    transform: translateX(-50%) translateY(100%);
+    z-index: 9;
+  }
+
+  .modalDica::before, .modalDica::after {
+    top: 1px;
+    bottom: unset;
+    transform: translateX(-50%) translateY(-100%) scaleY(-1);
+  }
+
+  .modalDica::after {
+    bottom: unset;
+    top: 0px;
+  }
+
+  .content {
+    height: inherit;
+    padding-bottom: 0;
+  }
+
+  .lista {
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 20px;
+  }
+
+  .separator {
+    width: 1000vw;
+    border-bottom: 1px solid var(--light-gray);
+    transform: translateX(-50%);
+  }
+
+  .buttonLista {
+    width: 100% !important;
+  }
+
+  .buttonCreateLista {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .modalMobileTitleIcon g {
+    opacity: 1;
+    fill: #b4b4b4;
+    stroke: #b4b4b4;
+  }
+
+  .titleSelectList {
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 2.4rem;
+    font-weight: 300;
+    color: var(--dark-gray);
+  }
+}

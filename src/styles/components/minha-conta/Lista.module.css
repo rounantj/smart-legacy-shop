@@ -1,0 +1,129 @@
+.lista {
+  padding-bottom: 0;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px #6a6a6a19;
+  border-radius: 5px;
+	border-left: 5px solid transparent;
+}
+
+.lista > * {
+  padding: 20px;
+}
+
+.lista.active {
+	border-color: var(--primary);
+}
+
+.lista:not(.active) > *:not(.header) {
+	display: none;
+}
+
+.lista.active .header {
+  border-bottom: 1px solid #ededed;
+}
+
+.lista:not(.active) .header .inputText {
+	display: none;
+}
+
+.lista.active .header .buttonAddListToCart {
+	display: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid transparent;
+  cursor: pointer;
+}
+
+.headerTitle {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+}
+
+.header .boxIcon {
+  width: 33px;
+  height: 33px;
+  background-color: var(--light-green);
+  border-radius: 100%;
+}
+
+.header .text {
+  position: relative;
+  font-size: 1.6rem;
+  color: var(--primary);
+}
+
+.header .text .value {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 3px;
+  font-size: 1.2rem;
+  color: #fff;
+  border-radius: 100%;
+  background-color: var(--primary);
+  aspect-ratio: 1;
+  transform: translate(100%, -60%);
+}
+
+.header .inputText {
+	width: min(206px, 100%);
+	min-height: 4rem;
+	padding-left: calc(13px * 3);
+	background-image: url(/images/comment_icon.png);
+	background-repeat: no-repeat;
+	background-position: center left 13px;
+}
+
+.header .inputText::placeholder {
+	color: #B4B4B4;
+}
+
+.body {
+  padding-top: 17px;
+}
+
+.menu {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+	margin-bottom: 18px;
+}
+
+.menu button {
+  min-width: 133px;
+  padding: 10px 20px;
+  color: var(--gray);
+  border-radius: 25px;
+  border: 1px solid #f0f0f0;
+  background-color: #fff;
+}
+
+.menu button.active {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.footer {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background-color: #DCEFE34D;
+}
+
+.subtotal .value {
+	font-weight: bold;
+	color: var(--primary);
+}
+
+@media (max-width: 991px) {
+
+  .header, .footer{
+    display: inline-grid !important;
+  }
+}
+

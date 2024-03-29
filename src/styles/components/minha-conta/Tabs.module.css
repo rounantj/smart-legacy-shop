@@ -1,0 +1,9 @@
+.tab {
+	display: none;
+	flex-direction: column;
+	gap: 19px;
+}
+
+.tab.active {
+	display: flex;
+}

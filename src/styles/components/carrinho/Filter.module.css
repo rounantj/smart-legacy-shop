@@ -1,0 +1,166 @@
+.filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  margin-top: 17px;
+  margin-bottom: 14px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #b4b4b4;
+  text-transform: uppercase;
+}
+.asideIcon {
+  width: 35px;
+  height: 35px;
+  position: relative;
+  text-align: center;
+  margin: auto;
+}
+.listaLado {
+  gap: 10px;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.name {
+  position: relative;
+}
+
+.categoryList {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.quantityBox {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  aspect-ratio: 1;
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: 3px;
+  border-radius: 100%;
+  background-color: var(--gray);
+  transition: var(--transition);
+  transform: translate(60%, -100%);
+  padding: 5px;
+}
+
+.quantityBox > * {
+  position: relative;
+  top: 1px;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 10px;
+  min-height: 46px;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: center;
+}
+
+.category.categoryTudo .quantityBox {
+  transform: translate(100%, -50%);
+}
+
+.category#active,
+.category:hover {
+  color: var(--primary);
+  background-color: var(--secondary);
+}
+
+.category::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0px;
+  height: 100%;
+  background-color: transparent;
+  transform: translateX(100%);
+  clip-path: polygon(0 0, 0% 100%, 100% 50%);
+  transition: var(--transition);
+}
+
+.category#active::before,
+.category:hover::before {
+  width: 5px;
+  background-color: var(--secondary);
+}
+
+.category#active .quantityBox,
+.category:hover .quantityBox {
+  background-color: var(--primary);
+}
+.isActive {
+  background-color: var(--secondary);
+  color: var(--dark-gray);
+}
+
+@media (max-width: 991px) {
+  .filter {
+    align-items: flex-start;
+  }
+
+  .categoryList {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .category {
+    min-width: 133px;
+    padding: 22px 15px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border-bottom: 3px solid transparent;
+  }
+
+  .category::before {
+    display: none;
+  }
+
+  .quantityBox {
+    transform: translate(0%, -100%);
+  }
+
+  .category.categoryTudo .quantityBox {
+    transform: translate(90%, -100%);
+  }
+
+  .isActive {
+    border-color: var(--primary);
+  }
+
+  .isActive .quantityBox {
+    background-color: var(--primary);
+  }
+
+  .listaLado {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+    margin: 0;
+    transform: translateY(2px);
+  }
+
+  .asideIcon {
+    width: 26px;
+    height: 26px;
+  }
+}

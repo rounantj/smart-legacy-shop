@@ -1,0 +1,80 @@
+.boxIcon {
+	flex-shrink: 0;
+	position: relative;
+	padding: 15px;
+	border-radius: 100%;
+	border: 1px solid var(--primary);
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.boxIcon::before, .boxIcon::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 14px;
+	height: 3px;
+	background-color: var(--primary);
+	transform: translate(-50%, -50%);
+}
+
+.boxIcon.increaseItem::after {
+	transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.boxIconMobile {
+	flex-shrink: 0;
+	position: relative;
+	width: 26px;
+	height: 26px;
+	border-radius: 100%;
+	border: 1px solid #fff;
+	background-color: var(--primary);
+	cursor: pointer;
+}
+
+.boxIconMobile::before, .boxIconMobile::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 13px;
+	height: 3px;
+	background-color: #fff;
+	transform: translate(-50%, -50%);
+}
+
+.boxIconMobile.increaseItemMobile::after {
+	transform: translate(-50%, -50%) rotate(90deg);
+}
+
+
+.boxIcon2 {
+	flex-shrink: 0;
+	position: relative;
+	padding: 15px;
+	border-radius: 100%;
+	border: 1px solid white;
+	cursor: pointer;
+	background: var(--light-green) 0% 0% no-repeat padding-box;
+
+	border-radius: 100%;
+    margin: 10px auto;
+	opacity: 1;
+}
+
+.boxIcon2::before, .boxIcon2::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 13px;
+	height: 3px;
+	background-color: white;
+	transform: translate(-50%, -50%);
+}
+
+.boxIcon2.increaseItem::after {
+	transform: translate(-50%, -50%) rotate(90deg);
+}

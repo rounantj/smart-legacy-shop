@@ -1,0 +1,282 @@
+.editarDados {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+	width: 100%;
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+.box {
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px var(--light-gray);
+}
+
+.box > * {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-right: 22px;
+  padding-left: 42px;
+}
+
+.boxHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: 1px solid #ededed;
+}
+
+.boxTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  color: var(--primary);
+  font-size: 1.6rem;
+}
+
+.boxTitle .boxIcon {
+	flex-shrink: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 5px;
+  background-color: var(--secondary);
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.boxBody {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.field .fieldTitle {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.35;
+}
+
+.field .fieldValue {
+  font-weight: bold;
+  line-height: 1.3125;
+  color: var(--black);
+}
+
+.fieldEmail {
+  max-width: 100%;
+  min-width: 400px;
+}
+
+.fieldPhone {
+  max-width: 100%;
+  min-width: 220px;
+}
+
+.fieldList {
+  margin-top: 27px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.boxSeguranca .boxBody {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 60px;
+	row-gap: 20px;
+}
+
+.cardsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.card {
+  max-width: 320px;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0px 0px 10px var(--light-gray);
+  border: 2px solid var(--secondary);
+  border-radius: 5px;
+}
+
+.card.active {
+	border-color: var(--primary);
+}
+
+.card.active .cardFooter .cardButton {
+	display: none;
+}
+
+.card:not(.active) .cardFooter .cardDefaultBox {
+	display: none;
+}
+
+.card > * {
+	padding: 15px;
+}
+
+.cardFooter {
+	border-top: 1px solid var(--light-gray);
+}
+
+.cardBody {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	font-size: 1.4rem;
+	font-weight: 300;
+}
+
+.cardTitle {
+	margin-bottom: 3px;
+	font-size: 1.4rem;
+	font-weight: bold;
+}
+
+.cardImageBox {
+	flex-shrink: 0;
+	position: relative;
+	width: 56px;
+	height: 34px;
+}
+
+.card .cardFooter {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.card .cardFooter .cardButton {
+	all: unset;
+	padding: 8px 16px;
+	font-size: 1.5rem;
+	font-weight: 400;
+	color: var(--primary);
+	box-sizing: border-box;
+	border-radius: 5px;
+	border: 1px solid var(--primary);
+	cursor: pointer;
+}
+
+.card .cardFooter .cardDelete {
+	all: unset;
+	box-sizing: border-box;
+	flex-shrink: 0;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 36px;
+	border-radius: 100%;
+	background-color: var(--secondary);
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.cardDefaultBox {
+	display: flex;
+	align-items: center;
+	gap: 9px;
+	font-size: 1.4rem;
+	font-weight: bold;
+	color: var(--primary);
+}
+
+.cardDefaultBoxIcon {
+	flex-shrink: 0;
+	width: 20px;
+	height: 20px;
+	background-color: var(--primary);
+	border-radius: 100%;
+}
+
+.addAddress {
+	all: unset;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	gap: 21px;
+	padding: 14px;
+	margin-bottom: 17px;
+	max-width: 320px;
+	width: 100%;
+	background-color: #FCFFFD;
+	border: 2px solid var(--secondary);
+	border-radius: 5px;
+}
+
+.addAddressIcon {
+	position: relative;
+	width: 46px;
+	height: 46px;
+	background-color: var(--secondary);
+	border-radius: 100%;
+}
+
+.addAddressIcon::before, .addAddressIcon::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 16px;
+	height: 4px;
+	background-color: var(--primary);
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.addAddressIcon::after {
+	transform: translateX(-50%) translateY(-50%) rotate(90deg);
+}
+
+.modalTitle {
+	margin-bottom: 16px;
+	text-align: center;
+	font-size: 2.4rem;
+	font-weight: 300;
+}
+
+.step2 {
+ 
+}
+
+@media (max-width: 991px) {
+	.box > * {
+		padding-right: 17px;
+		padding-left: 17px;
+	}
+
+	.card .cardFooter {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 12px;
+	}
+
+	.card .cardFooter .cardButton {
+		width: 100%;
+		min-height: 53px;
+		text-align: center;
+	}
+
+	.card .cardFooter .cardDelete {
+		width: 100%;
+		height: auto;
+		min-height: 53px;
+		border-radius: 5px;
+	}
+
+	.card .cardFooter > * {
+		width: 100%;
+	}
+}

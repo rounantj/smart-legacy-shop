@@ -1,0 +1,100 @@
+.modal {
+
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  max-width: 777px;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #fff;
+  cursor: auto;
+  overflow-y: auto;
+  box-shadow: 777px 0px 0px 23vw #0000007d;
+}
+.cobreTela{
+  background: rgba(0,0,0,.5);
+  position: fixed;
+  width: -webkit-calc(100vh - 10px);
+  width: -moz-calc(100vh - 10px);
+  width: calc(100vh - 10px);
+  height: 100vh;
+  top: 0;
+  right: 0;
+
+}
+
+.modalActive {
+  background-color: rgba(0,0,0,.5);
+  pointer-events: unset;
+  /* min-width: calc(100vw - 100% - 32px); */
+  min-height: 100vh;
+  position: absolute;
+  left: 100%;
+  top: -20px;
+}
+
+.modal ul {
+  margin: 0;
+  padding: 0;
+}
+
+.modal ul li {
+  list-style: none;
+}
+
+.title {
+  margin-bottom: 10px;
+}
+
+.sugestoesList {
+  display: none;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.sugestoesList > * {
+  width: 100%;
+  max-width: 100px;
+}
+
+.containerInner {
+  max-width: 666px;
+  width: 100%;
+  margin-left: auto;
+}
+
+.header, .body {
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid var(--light-green);
+}
+
+.linkWithArrow .linkText {
+	font-weight: bold;
+	margin-right: 5px;
+}
+
+.colunaDireita {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu a {
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: var(--gray);
+  transition: var(--transition);
+}
+
+.menu a:hover {
+  color: var(--primary);
+}
+
+.menuTitle {
+  margin-bottom: 10px;
+}

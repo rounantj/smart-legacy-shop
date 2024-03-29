@@ -1,0 +1,34 @@
+.loja {
+	display: flex;
+	flex-direction: column;
+	border-radius: 5px;
+	border: 1px solid var(--light-green);
+}
+
+.imageBox {
+	position: relative;
+	width: 100%;
+	padding-top: 58%;
+}
+
+.body {
+	padding: 16px;
+	padding-bottom: 0;
+}
+
+.title {
+	margin-bottom: 10px;
+	font-size: 1.6rem;
+}
+
+.telefone {
+	color: var(--primary);
+}
+
+.botao {
+	display: block;
+	margin-top: 15px;
+	padding: 15px;
+	text-align: center;
+	border-top: 1px solid var(--light-green);
+}

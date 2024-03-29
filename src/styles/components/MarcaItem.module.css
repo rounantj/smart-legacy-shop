@@ -1,0 +1,17 @@
+.inputBox .counter {
+	margin-left: 5px;
+	padding: 3px 6px;
+	font-size: 1.4rem;
+	color: var(--primary);
+	background-color: var(--light-gray);
+	border-radius: 15px;
+}
+
+.inputBox label {
+	margin: 0;
+	transition: var(--transition);
+}
+
+.inputBox input:checked + label {
+	color: var(--primary);
+}

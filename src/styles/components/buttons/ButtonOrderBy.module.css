@@ -1,0 +1,36 @@
+.btn {
+	all: unset;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+	width: 100%;
+	padding: 20px;
+	border: 1px solid;
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+
+.colLeft {
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 10px;
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+.text {
+	max-width: 100%;
+	overflow: hidden;
+	display: block;
+	-webkit-line-clamp: 1;
+	display: box;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+	white-space: normal;
+}
+
+.btn .arrowDown {
+	flex-shrink: 0;
+}

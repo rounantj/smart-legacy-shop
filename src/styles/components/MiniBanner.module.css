@@ -1,0 +1,30 @@
+.miniBanner {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	padding: 2rem;
+
+	font-size: 1.8rem;
+	line-height: 2.4rem;
+
+	border-radius: var(--border-radius);
+	background-size: 50%;
+	background-position: center right;
+	background-repeat: no-repeat;
+	background-color: var(--secondary);
+}
+
+.title {
+	margin-bottom: 0;
+	font-weight: bold;
+	color: var(--primary);
+	user-select: none;
+}
+
+.subtitle {
+	margin-bottom: 0;
+	font-weight: bold;
+	color: var(--dark-green);
+	user-select: none;
+}

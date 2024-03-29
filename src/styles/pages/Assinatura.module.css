@@ -1,0 +1,194 @@
+
+.mainBanner {
+	position: relative;
+}
+
+.pageTitle {
+	position: absolute;
+	top: 50%;
+	left: 20px;
+	transform: translateY(-50%);
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+	padding-bottom: 25px;
+	border-bottom: 1px solid var(--light-green);
+}
+
+.headerTitle {
+	font-size: 2.8rem;
+}
+
+.content {
+	padding: 25px;
+}
+
+.contentBox {
+	padding-top: 20px;
+}
+
+.headerButton {
+	min-width: 294px;
+	font-weight: normal;
+}
+
+.featureImage {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.featureMeta {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	max-width: 390px;
+	height: 100%;
+}
+
+.featurePreTitle {
+	margin-bottom: 3px;
+	font-size: 1.4rem;
+	font-weight: 300;
+	font-style: italic;
+	color: var(--primary);
+}
+
+.featureTitle {
+	margin-bottom: 16px;
+	font-size: 2.4rem;
+}
+
+.module {
+	margin-top: 30px;
+	margin-bottom: 60px;
+	text-align: center;
+}
+
+.moduleTitle{
+	margin-bottom: 16px;
+	font-size: 2.4rem;
+}
+
+.comoFuncionaButton {
+	min-width: min(294px, 100%);
+}
+
+.cardList {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 16px;
+	margin-bottom: 24px;
+}
+
+.card {
+	position: relative;
+	max-width: 206px;
+	padding: 18px;
+	text-align: center;
+	border: 1px solid var(--light-green);
+	border-radius: 5px;
+}
+
+.cardHeader {
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+.card .cardBoxImg {
+	position: relative;
+	width: 100%;
+	padding-top: 100%;
+	margin-bottom: 12px;
+}
+
+.card .cardTitle {
+	margin-bottom: 10px;
+	font-size: 1.6rem;
+}
+
+.cestaList {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+
+.card:not(:last-of-type)::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: -1px;
+	width: 41px;
+	height: 31px;
+	color: var(--primary);
+	background-image: url(/images/arrow-cards.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto;
+	background-color: var(--light-green);
+	border-radius: 34px;
+	transform: translateY(-50%) translateX(70%);
+}
+
+.cestaTitle {
+	position: relative;
+	padding-bottom: 10px;
+	margin-bottom: 0;
+	text-align: left;
+	font-size: 1.6rem;
+	font-weight: 300;
+	color: var(--primary);
+}
+
+.cestaTitle::before {
+	content: '';
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	width: 72px;
+	height: 3px;
+	border-radius: 1px;
+	background-color: var(--primary);
+}
+
+.cestaHeader {
+	margin-bottom: 25px;
+	border-bottom: 1px solid var(--light-green);
+}
+
+.itemList {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	gap: 21px;
+}
+
+.module .containerInner {
+	max-width: 650px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.perguntaList {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	margin-top: 55px;
+	margin-bottom: 60px;
+}
+
+.perguntaItem {
+	text-align: left;
+}
+
+.perguntaItem .pergunta {
+	font-size: 1.8rem;
+}
+
+.perguntaButton {
+	min-width: min(294px, 100%);
+}

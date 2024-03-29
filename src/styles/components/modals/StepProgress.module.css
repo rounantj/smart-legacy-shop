@@ -1,0 +1,16 @@
+.stepProgress {
+	display: flex;
+	justify-content: center;
+	gap: 3px;
+}
+
+.bar {
+	width: 40px;
+	height: 10px;
+	border: 1px solid var(--light-green);
+	border-radius: 2px;
+}
+
+.bar.barCompleted {
+	background-color: var(--primary);
+}

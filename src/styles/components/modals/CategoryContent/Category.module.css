@@ -1,0 +1,46 @@
+.category {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+	padding: 15px;
+	border-radius: 5px;
+	box-shadow: 0px 3px 5px rgba(106, 106, 106, .3);
+}
+
+.category > * {
+	flex-shrink: 0;
+}
+
+.mainArea {
+	flex-shrink: 1;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.categoryName {
+	display: box;
+	text-overflow: ellipsis;
+	-webkit-line-clamp: 1;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+	word-break: break-all;
+	overflow: hidden;
+}
+
+.thumbnail {
+	flex-shrink: 0;
+}
+
+.button {
+	all: unset;
+	cursor: pointer;
+}
+
+.asideIcon{
+	width: 25px;
+	height: 25px;
+	position: relative;
+  }

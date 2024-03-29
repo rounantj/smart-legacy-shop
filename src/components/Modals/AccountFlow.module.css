@@ -1,0 +1,227 @@
+.containerInner {
+	max-width: 460px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.boxLogo {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.contentBox {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 440px;
+	padding: 30px 20px;
+	background-color: #fff;
+	border-radius: 25px;
+	box-shadow: 0px 0px 10px #6a6a6a19;
+}
+
+.login,
+.registerForm {
+	width: 100%;
+}
+
+.title {
+	margin-bottom: 35px;
+	font-size: 2.7rem;
+}
+
+.registerForm .title {
+	font-weight: bold;
+	margin-bottom: 7px;
+}
+
+.titleLogin {
+	display: block;
+	max-width: 346px;
+	margin: 0 auto;
+	margin-bottom: 40px;
+	font-size: 2.4rem;
+	color: var(--dark-gray);
+	line-height: 3.2rem;
+	font-weight: normal;
+}
+
+.titleLogin .userEmail {
+	font-size: 2rem;
+	font-weight: bold;
+	color: var(--black);
+}
+
+.registerMessage {
+	margin-bottom: 35px;
+}
+
+.registerForm .registerMessage {
+	margin-bottom: 35px;
+}
+
+.registerMessage button {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	color: var(--primary);
+	font-weight: bold;
+	background-color: unset;
+}
+
+.loginBox {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	width: 100%;
+}
+
+.loginBoxItem {
+	width: 100%;
+	min-height: 50px;
+	color: var(--dark-gray);
+	border: 1px solid var(--gray);
+	box-shadow: 0px 5px 15px #6a6a6a21;
+	border-radius: 5px;
+	background-color: #fff;
+}
+
+#facebook {
+	color: #fff;
+	background-color: #4066b4;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.form .input {
+	width: 100%;
+}
+
+.btnVoltar {
+	position: absolute;
+	top: 26px;
+	left: 16px;
+	padding: 15px;
+	background-color: transparent;
+	border-radius: 100%;
+	border: 1px solid var(--primary);
+}
+
+.btnVoltarLine {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 5px;
+	height: 2px;
+	background-color: var(--primary);
+	transform: translate(-50%, -50%) rotate(45deg) scale(1.2);
+	transform-origin: left;
+}
+
+.btnVoltarLine:last-child {
+	transform: translate(-50%, -50%) rotate(-45deg) scale(1.2);
+}
+
+.btnLogin {
+	width: 100%;
+}
+
+.separator {
+	margin-bottom: 40px;
+}
+
+.passwordOptions {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+	margin-top: 5px;
+	font-size: 1.6rem;
+	color: var(--dark-gray);
+}
+
+.passwordOptions .inputCheck {
+	cursor: pointer;
+}
+
+.passwordOptions .btnForgotPass {
+	all: unset;
+	color: var(--primary);
+	cursor: pointer;
+}
+
+.emailOuCelular {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* background-image: url(/images/email-celular.png); */
+	background-position: center left 20px;
+	background-repeat: no-repeat;
+}
+
+.google>* {
+	position: relative;
+	width: 100%;
+	align-items: center;
+	box-shadow: unset !important;
+}
+
+.google div {
+	position: absolute;
+	left: 12px;
+	margin: unset !important;
+	padding: 0 !important;
+}
+
+.google svg {
+	transform: scale(1.2);
+}
+
+.google span {
+	padding: 0 !important;
+	width: 100%;
+	font-size: 1.6rem !important;
+}
+
+@media (max-width: 991px) {
+	.boxLogo {
+		display: none;
+	}
+
+	.containerInner {
+		max-width: 100%;
+		text-align: left;
+	}
+
+	.contentBox {
+		padding: 0;
+		border-radius: 0;
+		box-shadow: unset;
+		min-height: unset;
+	}
+
+	.title {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		margin-top: 31px;
+		font-size: 2.1rem;
+		font-weight: bold;
+	}
+
+	.loginMain {
+		display: flex;
+		flex-direction: column-reverse;
+		gap: 50px;
+	}
+
+	.registerMessage {
+		text-align: center;
+	}
+}

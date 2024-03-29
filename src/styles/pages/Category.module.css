@@ -1,0 +1,197 @@
+.pageCategory {
+  width: 100%;
+}
+
+.pageTitle {
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.productList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(206px, 255px));
+  gap: 6px;
+  padding-left: 15px;
+}
+
+.bannerItem {
+  width: 100%;
+  padding-top: 16.17%;
+}
+
+.exibindoQtd {
+  font-weight: bold;
+}
+
+.exibindoCategories {
+  font-weight: bold;
+}
+
+.categoryMenu {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(206px, 1fr));
+  gap: 6px;
+}
+
+.categoryMenu>* {
+  flex: 1;
+}
+
+.categoryMenu .categoryMenuMostrarMais {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 60px;
+  padding: 0;
+  padding-right: 5px;
+  padding-left: 13px;
+  color: var(--primary);
+  font-weight: bold;
+  background-color: #fff;
+  border: 1px solid var(--light-green);
+  border-radius: 5px;
+  outline: 0;
+}
+
+.categoryMenu .categoryMenuMostrarMais.disabled {
+  display: none;
+}
+
+.boxOfertas {
+  margin-bottom: 16px;
+  /* padding: 20px; */
+  border-radius: var(--border-radius);
+  background-color: #fff;
+}
+
+.boxOfertasHeader {
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+.boxOfertasTitle {
+  font-size: 2.4rem;
+  font-weight: lighter;
+  text-align: left;
+}
+
+.boxOfertasLink {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+.receitaList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(317px, 1fr));
+  width: 100%;
+  gap: 16px;
+}
+
+.verTodas {
+  font-weight: bold;
+  color: var(--primary);
+  margin-top: 30px;
+}
+
+@media (max-width: 1400px) {
+  .categoryMenu {
+    grid-template-columns: repeat(auto-fit, minmax(206px, 1fr));
+  }
+}
+
+@media (max-width: 991px) {
+  .bannerItem {
+    padding-top: 40.86%;
+  }
+
+  .pageTitle {
+    margin-bottom: 5px;
+    font-size: 2.1rem;
+  }
+
+  .pageTitleIcon {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 22px;
+  }
+
+  .content {
+    margin-top: 16px;
+    margin-bottom: 18px;
+    padding: 0 !important;
+    background-color: transparent;
+  }
+
+  .categoryMenu {
+    grid-auto-flow: column;
+    overflow-x: auto;
+  }
+
+  .modelPageInterna {
+    background-color: transparent !important;
+    box-shadow: unset !important;
+  }
+
+  .mainContent {
+    margin-right: -15px;
+    margin-left: -15px;
+    border-radius: 0;
+  }
+
+  .boxOfertasWithFilter .exibindo {
+    display: none;
+  }
+
+  .boxOfertasLink {
+    display: flex;
+    position: relative;
+  }
+
+  .productList {
+    grid-template-columns: repeat(auto-fit, minmax(157px, 255px));
+    width: 100%;
+    margin: 0;
+    padding-right: 0px;
+    padding-left: 0px;
+    scroll-snap-type: x mandatory;
+     
+  }
+
+  .modelBoxOfertas {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    box-shadow: unset !important;
+    background-color: transparent !important;
+  }
+
+  .modelBoxOfertas .boxOfertasWithFilter {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.asideIcon {
+  width: 25px;
+  height: 25px;
+  position: relative;
+}
+
+@media (max-width: 576px) {
+  .productList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: auto;
+  }
+
+  .productList>div {
+    min-width: 165px;
+  }
+}

@@ -1,0 +1,46 @@
+.header {
+	padding-top: 25px;
+	padding-bottom: 25px;
+	border-bottom: 1px solid var(--light-gray);
+}
+
+.messageBox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 25px;
+	padding-right: 25px;
+	padding-left: 25px;
+	color: var(--black);
+}
+
+.body {
+	display: flex;
+	justify-content: center;
+	padding: 25px;
+}
+
+.checklistBox {
+	display: flex;
+	flex-direction: column;
+}
+
+.checklistTitle {
+	margin-bottom: 12px;
+	font-size: 1.6rem;
+	color: #025562;
+}
+
+.checklist {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.checklist .item {
+	display: flex;
+	align-items: center;
+	gap: 7px;
+	color: var(--gray);
+}

@@ -1,0 +1,29 @@
+.btnRemoveItem {
+	flex-shrink: 0;
+	position: relative;
+	padding: 15px;
+	background-color: transparent;
+	border: 1px solid var(--gray);
+	border-radius: 100%;
+	cursor: pointer;
+	margin: auto
+}
+
+.btnRemoveItem::before, .btnRemoveItem::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 50%;
+	height: 3px;
+	background-color: var(--gray);
+	transform: translate(-50%, -50%);
+}
+
+.btnRemoveItem::before {
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.btnRemoveItem::after {
+	transform: translate(-50%, -50%) rotate(-45deg);
+}

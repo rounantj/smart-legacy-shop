@@ -1,0 +1,302 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding-top: 5px;
+  padding-right: 10px;
+  background-color: var(--light-green);
+  opacity: 1;
+  pointer-events: none;
+  z-index: 9;
+  transition: var(--transition);
+}
+
+.modal2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding-top: 5px;
+  padding-right: 10px;
+  display: none;
+  background-color: var(--light-green);
+  opacity: 1;
+  pointer-events: none;
+  z-index: 9;
+  transition: var(--transition);
+}
+
+.modalCEP {
+  max-width: 100%;
+  width: 872px;
+  height: 970px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 10px #6A6A6A19;
+  border-radius: 25px;
+  opacity: 1;
+
+  margin: 100px auto;
+  padding: 5px;
+}
+
+.listaAbas {
+  display: inline-flex;
+  max-width: 100%;
+  width: 650px;
+  padding: 15px;
+  text-align: center;
+  opacity: 1;
+  margin: auto;
+  margin-left: calc(50% - 325px);
+}
+
+.modalImage {
+  width: 145px;
+  height: 153px;
+  margin: auto;
+}
+
+.modalTitle {
+  font: var(--unnamed-font-style-normal) normal bold var(--unnamed-font-size-24)/var(--unnamed-line-spacing-32) var(--unnamed-font-family-roboto);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  text-align: center;
+  font: normal normal bold 24px/32px Roboto;
+  letter-spacing: 0px;
+  color: #333333;
+  opacity: 1;
+}
+
+.areaLojas {
+  max-width: 100%;
+  width: 680px;
+  height: 500px;
+  max-height: 300px;
+  max-height: 600px;
+  margin-left: calc(50% - 325px);
+  margin-top: 5px;
+  margin-bottom: 30px;
+  overflow: auto;
+}
+
+.inputCEP {
+  width: calc(100% - 50px);
+}
+
+.btnVoltar {
+  padding: 15px;
+  border: 1px solid var(--primary);
+  opacity: 1;
+  margin-left: calc(50% - 325px);
+  border-radius: 100%;
+  margin-top: 10px;
+}
+
+.areaTxt {
+  text-align: left;
+  max-width: 45%;
+  margin-left: 20px;
+}
+
+.cardLoja {
+  max-width: 100%;
+  width: 650px;
+  height: 100px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 10px #6A6A6A19;
+  border: 1px solid #DCF4E6;
+  border-radius: 5px;
+  opacity: 1;
+  margin: auto;
+  margin-left: calc(50% - 340px);
+  margin-top: 25px;
+  display: inline-flex;
+  padding: 5px;
+}
+
+.cardLoja:hover {
+
+  border: 1px solid var(--primary);
+
+}
+
+.imgLoja {
+  width: 110px;
+  height: 93px;
+
+  border-radius: 4px 0px 0px 4px;
+  opacity: 1;
+}
+
+.lojaTitle {
+  font: var(--unnamed-font-style-normal) normal bold 16px/21px var(--unnamed-font-family-roboto);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  text-align: left;
+  font: normal normal bold 16px/21px Roboto;
+  letter-spacing: 0px;
+  color: #333333;
+}
+
+.addressLoja {
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300) 16px/21px var(--unnamed-font-family-roboto);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-6a6a6a);
+  text-align: left;
+  font: normal normal 300 16px/21px Roboto;
+  letter-spacing: 0px;
+  color: #6A6A6A;
+  opacity: 1;
+}
+
+.btnLoja {
+  width: 165px;
+  height: 53px;
+  background: var(--primary) 0% 0% no-repeat padding-box;
+  border-radius: 5px;
+  opacity: 1;
+  margin: auto;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.txtBtn {
+  font: var(--unnamed-font-style-normal) normal normal 16px/21px var(--unnamed-font-family-roboto);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  text-align: center;
+  font: normal normal normal 16px/21px Roboto;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 1;
+  margin: auto;
+}
+
+.btnAba {
+  margin: auto;
+  cursor: pointer;
+}
+
+.btnAbaActive {
+  border-bottom: 2px solid var(--primary);
+}
+
+.borderAba {
+  max-width: 100%;
+  width: 650px;
+  height: 0px;
+  border: 0.949999988079071px solid #EDEDED;
+  opacity: 1;
+  margin-top: -15px;
+  margin-left: calc(50% - 325px);
+}
+
+.modalAba {
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300) 18px/24px var(--unnamed-font-family-roboto);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  text-align: center;
+  font: normal normal 300 18px/24px Roboto;
+  letter-spacing: 0px;
+  color: #B4B4B4;
+  opacity: 1;
+}
+
+.abaActive {
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300) 18px/24px var(--unnamed-font-family-roboto);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  text-align: center;
+  font: normal normal 300 18px/24px Roboto;
+  letter-spacing: 0px;
+  color: var(--primary);
+  opacity: 1;
+}
+
+.modalActive {
+  background-color: rgba(0, 0, 0, 0.8);
+  pointer-events: unset;
+  z-index: 9;
+  height: 150vh;
+  overflow: auto;
+  max-height: 100vh;
+
+}
+
+.inputArea {
+  max-width: 100%;
+  width: 650px;
+  /* height: 52px; */
+  background: #f0f0f0 0 0 no-repeat padding-box;
+  border: 1px solid #efefef;
+  border-radius: 5px;
+  opacity: 1;
+  margin: 25px auto auto calc(50% - 325px);
+  padding-left: 30px;
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: inline-flex;
+  padding: 5px;
+  padding-left: 30px;
+
+}
+
+.areaEnderco {
+  width: 650px;
+  margin: 15px auto auto calc(50% - 325px);
+  max-height: 230px;
+  overflow: auto;
+}
+
+.modalSubTitle {
+  font: var(--unnamed-font-style-normal) normal bold 16px/21px var(--unnamed-font-family-roboto);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  text-align: center;
+  font: normal normal bold 16px/21px Roboto;
+  letter-spacing: 0px;
+  color: #333333;
+  opacity: 1;
+}
+
+.abaOne {
+  height: 340px;
+  margin-bottom: 50px;
+}
+
+.modalFooterTitle {
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300) 16px/36px var(--unnamed-font-family-roboto);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-6a6a6a);
+  text-align: center;
+  font: normal normal 300 16px/36px Roboto;
+  letter-spacing: 0px;
+  color: #6A6A6A;
+  opacity: 1;
+}
+
+.modalLink {
+  font: var(--unnamed-font-style-normal) normal bold 18px/24px var(--unnamed-font-family-roboto);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  text-align: center;
+  font: normal normal bold 18px/24px Roboto;
+  letter-spacing: 0px;
+  color: var(--primary);
+  opacity: 1;
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+
+  .modalAba {
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300) 18px/24px var(--unnamed-font-family-roboto);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    text-align: center;
+    font: normal normal 300 16px Roboto;
+    letter-spacing: 0px;
+    color: #B4B4B4;
+    opacity: 1;
+  }
+
+  .modalCEP {
+    border: none;
+    box-shadow: none;
+  }
+}

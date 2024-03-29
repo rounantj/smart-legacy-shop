@@ -1,0 +1,19 @@
+.btn {
+	all: unset;
+	min-width: min(20rem, 100%);
+	min-height: 5.3rem;
+	padding: 0.5rem 2rem;
+	text-align: center;
+	color: #fff;
+	background-color: var(--primary);
+	border-radius: var(--border-radius);
+	opacity: 1;
+	box-sizing: border-box;
+	transition: var(--transition);
+	cursor: pointer;
+}
+
+.btn:disabled {
+	opacity: 0.5;
+	cursor: no-drop;
+}

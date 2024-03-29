@@ -1,0 +1,114 @@
+.productList {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  max-height: max(405px, 50vh);
+	padding-right: 16px;
+  overflow: auto;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 26px 20px;
+  border: 1px solid var(--seocndary);
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #6A6A6A19;
+}
+
+.thumbnail {
+	display: flex;
+	align-items: center;
+	flex-shrink: 0;
+	position: relative;
+	width: 74px;
+	height: 64px;
+	margin-top: 5px;
+	margin-left: 15px;
+}
+
+.checkbox {
+  all: unset;
+	position: relative;
+  width: 20px;
+  height: 20px;
+  margin-right: 16px;
+  border: 1px solid #b4b4b4;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.checkbox::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 80%;
+	height: 80%;
+	border-radius: 5px;
+	background-color: var(--primary);
+	opacity: 0;
+	transform: translate(-50%, -50%);
+	transition: var(--transition);
+}
+
+.checkbox.checked {
+	border-color: var(--primary);
+}
+
+.checkbox.checked::before {
+	opacity: 1;
+}
+
+.name {
+	font-size: 1.6rem;
+	font-weight: bold;
+	color: var(--black);
+ 
+    min-width: 200px;
+    max-width: 200px;
+    text-align: left;
+}
+
+.colRight {
+  display: flex;
+	gap: 50px;
+  margin-left: auto;
+  max-width: 40%;
+}
+
+.boxPrice {
+	display: flex;
+	align-items: center;
+	flex-shrink: 0;
+	gap: 5px;
+	font-size: 1.6rem;
+	font-weight: bold;
+}
+
+.boxPrice .price {
+	color: var(--primary);
+}
+
+.boxPrice .originalPrice {
+	font-weight: 300;
+	color: var(--dark-gray);
+	text-decoration: line-through;
+}
+
+.amount {
+  display: flex;
+	justify-content: space-between;
+	min-width: 124px;
+}
+.amount2 {
+	display: flex;
+	  justify-content: space-between;
+	  min-width: 200px;
+  }
+
+.amount .value {
+	font-weight: 400;
+}

@@ -1,0 +1,622 @@
+.main {
+	padding-top: 21px;
+	padding-bottom: 140px;
+}
+
+.itemTitle {
+	min-width: 50%;
+}
+
+.pageTitle {
+	margin-bottom: 18px;
+	color: var(--black);
+	font-size: 3.4rem;
+	font-weight: bold;
+	line-height: 4.5rem;
+}
+
+.box {
+	margin-bottom: 27px;
+	border: 2px solid var(--secondary);
+	border-radius: 5px;
+}
+
+.box header {
+	display: flex;
+	border-bottom: 1px solid #ededed;
+}
+
+.boxTitle,
+.boxTabTitle {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin-bottom: 0;
+	padding: 14px 25px;
+	font-size: 1.6rem;
+	font-weight: bold;
+	color: var(--primary);
+}
+
+.titleIcon {
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 45px;
+	height: 45px;
+	border-radius: 100%;
+	background-color: var(--secondary);
+	overflow: hidden;
+}
+
+.boxBody {
+	padding: 23px 26px;
+	font-weight: 400;
+}
+
+.hide {
+	display: none;
+}
+
+.boxBody.retirarLoja {
+	padding: 23px 26px;
+}
+
+.boxBody p {
+	color: var(--black);
+	font-size: 1.6rem;
+	line-height: 2.1rem;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.form>* {
+	width: 100%;
+}
+
+.boxTab {
+	position: relative;
+	padding: 14px 25px;
+	background-color: transparent;
+	cursor: pointer;
+	transition: var(--transition);
+}
+
+.boxTab .boxTabCheck {
+	position: absolute;
+	top: 0;
+	right: 0;
+
+}
+
+.boxTab.active .boxTabCheck {
+	display: block;
+}
+
+.boxTab.active,
+.boxTab:hover {
+	background-color: rgb(232, 232, 235, .25);
+}
+
+.boxTab::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -1px;
+	width: 100%;
+	height: 3px;
+	background-color: transparent;
+}
+
+.boxTab.active::before {
+	background-color: var(--primary);
+}
+
+.boxTabTitle {
+	padding: 0;
+}
+
+.contentBox {
+	position: relative;
+}
+
+.boxTipoEnvio .contentBox:not(:last-child) {
+	padding-bottom: 40px;
+}
+
+.boxTipoEnvio .contentBox:not(:last-child):before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 15px;
+	width: 5px;
+	height: 100%;
+	border-left: 2px dashed var(--secondary);
+	z-index: -1;
+}
+
+.contentBoxList {
+	display: flex;
+	flex-direction: column;
+	gap: 13px;
+}
+
+.contentBoxContainer {
+	margin-left: 40px;
+}
+
+.contentBoxTitle {
+	display: flex;
+	align-items: center;
+	gap: 11px;
+	font-weight: normal;
+	margin-bottom: 8px;
+	color: var(--black);
+}
+
+.contentBoxSubtitle {
+	margin-bottom: 11px;
+	margin-top: -5px;
+	font-size: 1.6rem;
+	font-weight: 400;
+	color: var(--primary);
+}
+
+.contentBoxIcon {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 32px;
+	height: 32px;
+	border-radius: 100%;
+	background-color: var(--secondary);
+	margin-left: -3%;
+}
+
+.contentBox#enderecos .contentBoxItem {
+	align-items: center;
+}
+
+.contentBoxItem {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+	width: 90%;
+	padding: 24px 20px;
+	border-radius: 5px;
+	border: 2px solid var(--secondary);
+	cursor: pointer;
+	transition: var(--transition);
+
+	margin-top: 10px;
+
+
+}
+
+.contentBoxItem.active,
+.contentBoxItem:hover {
+	/* border: 2px solid var(--primary); */
+}
+
+.enderecoContent {
+	color: var(--black);
+	width: 100%;
+}
+
+.enderecoMensagem {
+	display: none;
+	font-size: 1.4rem;
+	font-weight: bold;
+	color: var(--primary);
+}
+
+.contentBoxItem.active .enderecoMensagem {
+	display: block;
+}
+
+.alterarEndereco {
+	margin-top: 13px;
+	font-size: 1.4rem;
+	font-weight: bold;
+	color: var(--primary);
+	cursor: pointer;
+}
+
+.contentBox#dates .contentBoxList {
+	flex-direction: row;
+	gap: 13px;
+	flex-wrap: wrap;
+}
+
+.contentBox#dates .contentBoxList .contentBoxItem {
+	max-width: calc((100% / 3) - (13px * 2 / 3));
+}
+
+.date {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	max-width: 100%;
+	float: right;
+}
+
+.date .top {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 22px;
+}
+
+.date .col_esquerda {
+	font-size: 1.9rem;
+	font-weight: bold;
+	min-width: 80px;
+}
+
+.date .col_direita {
+	font-weight: bold;
+	font-size: 1.4rem;
+	color: #b7b7b7;
+
+	max-width: 50%;
+	float: right;
+}
+
+.date .horario {
+	display: block;
+	font-size: 1.4rem;
+	font-weight: 300;
+	color: var(--gray);
+}
+
+.date .price {
+	font-weight: bold;
+}
+
+.contentBoxItem.active .date .col_esquerda,
+.contentBoxItem.active .date .price {
+	color: var(--primary);
+}
+
+.adicionarComentario {
+	margin-top: 28px;
+}
+
+.adicionarComentario input {
+	width: 100%;
+	min-height: 4rem;
+	padding-left: calc(13px * 3);
+	background-image: url(/images/comment_icon.png);
+	background-repeat: no-repeat;
+	background-position: center left 13px;
+}
+
+.adicionarComentario input::placeholder {
+	color: #b4b4b4;
+}
+
+.contentBox#formaDePagamento .contentBoxList {
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 25px;
+}
+
+.contentBox#formaDePagamento .contentBoxList .contentBoxItem {
+	position: relative;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 13px;
+	max-width: calc((100% / 2) - (25px / 2));
+	font-weight: 300;
+	font-size: 1.4rem;
+}
+
+.contentBox#formaDePagamento .itemImg * {
+	width: 56px;
+	height: 34px;
+	margin: 0 !important;
+}
+
+.box.boxFormaDePagamento .boxBody {
+	padding-top: 39px;
+}
+
+.box.boxFormaDePagamento .boxBody p {
+	color: var(--gray);
+}
+
+.notaFiscal {
+	margin-bottom: 36px;
+}
+
+.cpf {
+	font-weight: 500;
+}
+
+.submit {
+	max-width: 428px;
+	width: 100%;
+}
+
+.containerInner {
+	padding-right: 24px;
+	padding-left: 24px;
+}
+
+.containerList {
+	padding-left: 24px;
+	padding-right: 5px;
+	margin-bottom: 27px;
+}
+
+.boxResumoPedido {
+	position: sticky;
+	top: 40px;
+	padding-top: 25px;
+	border-radius: 5px;
+	box-shadow: 0px 5px 15px #6a6a6a1a;
+	overflow: hidden;
+}
+
+.resumoTitle {
+	margin-bottom: 15px;
+	text-align: center;
+	font-size: 1.6rem;
+	font-weight: bold;
+}
+
+.cupom {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding-bottom: 15px;
+	margin-bottom: 2px;
+	border-bottom: 1px dashed #ededed;
+}
+
+.cupomIcon {
+	flex-shrink: 0;
+	position: relative;
+	width: 45px;
+	height: 45px;
+	background-color: var(--light-gray);
+	border-radius: 100%;
+	padding: 9px;
+}
+
+.cupomIcon path {
+	fill: var(--gray);
+}
+
+.cupom .cupomInput {
+	width: 100%;
+	padding-left: 0;
+	font-weight: bold;
+	color: #b7b7b7;
+	background-color: transparent;
+	border: 0;
+}
+
+.cupom .cupomInput::placeholder {
+	color: #b7b7b7;
+}
+
+.calculator {
+	display: flex;
+	flex-direction: column;
+}
+
+.calculatorItem {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-right: 24px;
+	padding-left: 24px;
+}
+
+.calculatorItem .value {
+	font-weight: 400;
+}
+
+.calculatorItem.total {
+	padding-top: 16px;
+	padding-bottom: 16px;
+	font-weight: bold;
+	background-color: var(--light-gray);
+}
+
+.calculatorItem.total .value {
+	font-weight: bold;
+}
+
+@media (max-width: 991px) {
+
+	.header,
+	.footerDesktop,
+	.boxDesktop {
+		display: none;
+	}
+
+	.contentBoxItem {
+		display: flex;
+		justify-content: space-between;
+		gap: 20px;
+		width: 100%;
+		padding: 10px 8px;
+		border-radius: 5px;
+		border: 2px solid var(--secondary);
+		cursor: pointer;
+		transition: var(--transition);
+		margin-left: 5px;
+	}
+
+	.pageTitle {
+		display: flex;
+		align-items: center;
+		gap: 11px;
+		font-size: 2.1rem;
+	}
+
+	.pageTitleIcon {
+		display: flex;
+		align-items: center;
+		flex-shrink: 0;
+	}
+
+	.box {
+		border: 0;
+		margin-right: -15px;
+		margin-left: -15px;
+	}
+
+	.boxTitle,
+	.boxBody {
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+
+	.titleIcon path {
+		fill: var(--gray);
+	}
+
+	.boxTabTitle {
+		line-height: 1;
+		color: var(--gray);
+	}
+
+	.boxTab.active .boxTabTitle {
+		color: var(--primary);
+	}
+
+	.boxTab.active .titleIcon path {
+		fill: var(--primary);
+	}
+
+	.form {
+		margin-top: 30px;
+	}
+
+	.boxTipoEnvio .contentBox:not(:last-child):before {
+		display: none;
+	}
+
+	.contentBox .contentBoxContainer {
+		margin-left: 0;
+	}
+
+	.contentBox#lojas .contentBoxSubtitle {
+		display: none;
+	}
+
+	.enderecoMensagem {
+		max-width: 92px;
+	}
+
+	.enderecoContent {
+		width: 100%;
+	}
+
+	.alterarEndereco {
+		font-size: 1.6rem;
+	}
+
+	.contentBox#dates .contentBoxList {
+		flex-wrap: nowrap;
+		overflow-x: auto;
+		padding: 20px;
+	}
+
+	.contentBox#dates .contentBoxList .contentBoxItem {
+		max-width: unset;
+		min-width: 177px;
+	}
+
+	.adicionarComentario input {
+		max-width: 100%;
+	}
+
+	.contentBox#formaDePagamento .contentBoxList {
+		flex-direction: column;
+		gap: 15px;
+	}
+
+	.contentBox#formaDePagamento .contentBoxList .contentBoxItem {
+		max-width: 100%;
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+
+	.contentBox#formaDePagamento p {
+		color: var(--black);
+		font-weight: normal;
+	}
+
+	.cpf {
+		margin-bottom: 16px;
+		font-weight: bold;
+	}
+
+	.boxResumoPedido {
+		margin-right: -15px;
+		margin-left: -15px;
+		box-shadow: unset;
+	}
+
+	.footerMobile {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		background-color: #fff;
+		box-shadow: 0px 0px 10px #6A6A6A26;
+	}
+
+	.btnContinue {
+		width: 100%;
+		min-height: 70px;
+		border-radius: 0;
+	}
+
+	.containerInner {
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+
+	.containerList {
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+
+	.footerMobileBoxTotal {
+		display: flex;
+		justify-content: space-between;
+		gap: 10px;
+		padding-top: 17px;
+		padding-bottom: 17px;
+		color: var(--black);
+		font-weight: bold;
+	}
+
+	.footerMobileContinuar {
+		background: var(--primary) 0% 0% no-repeat padding-box;
+		box-shadow: 0px 0px 10px var(--secondary);
+		width: 100%;
+		padding: 25px;
+	}
+
+	.footerContinuarTexto {
+		text-align: center;
+		font: normal normal normal 18px/24px Roboto;
+		letter-spacing: 0px;
+		color: #FFFFFF;
+		opacity: 1;
+	}
+}

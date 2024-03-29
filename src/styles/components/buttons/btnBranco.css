@@ -1,0 +1,27 @@
+.boxIcon {
+	flex-shrink: 0;
+	position: relative;
+	width: 26px;
+	height: 26px;
+	border-radius: 100%;
+	border: 1px solid white; 
+	cursor: pointer;
+	background: #49B476 0% 0% no-repeat padding-box;
+	border-radius: 0px 0px 5px 0px;
+	opacity: 1;
+}
+
+.boxIcon::before, .boxIcon::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 13px;
+	height: 3px;
+	background-color: white;
+	transform: translate(-50%, -50%);
+}
+
+.boxIcon.increaseItem::after {
+	transform: translate(-50%, -50%) rotate(90deg);
+}

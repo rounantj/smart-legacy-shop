@@ -1,0 +1,71 @@
+.inputPrecoBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  margin-bottom: 10px;
+  font-weight: 300;
+  color: #B4B4B4;
+}
+
+.inputPrecoBox input {
+  text-align: right;
+  color: #B4B4B4;
+  border-color: #B4B4B4;
+  background-color: transparent;
+  background-image: url(/images/dolar.svg);
+  background-repeat: no-repeat;
+  background-position: left 15px center;
+  background-size: 9px;
+}
+
+.sliderThumb {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 100%;
+  border: 1px solid var(--primary);
+}
+
+.sliderThumb::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 9px;
+  height: 9px;
+  background-color: var(--primary);
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.sliderValue {
+  display: flex;
+  width: max-content;
+  position: absolute;
+  left: 50%;
+  color: #B4B4B4;
+  bottom: -5px;
+  transform: translateX(-50%) translateY(100%);
+}
+
+.rangeContainer {
+  position: relative;
+  width: 100%;
+}
+
+.range {
+  width: 100%;
+}
+
+.rangeMax {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.containerInner {
+  max-width: 650px;
+  margin: 0 auto;
+}

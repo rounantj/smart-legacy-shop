@@ -1,0 +1,37 @@
+.receitaCard {
+	width: 100%;
+	color: var(--gray);
+	border-radius: 5px;
+	border: 1px solid var(--light-green);
+	overflow: hidden;
+}
+
+.receitaCard:hover {
+	color: var(--gray);
+}
+
+.thumbnail {
+	position: relative;
+	width: 100%;
+	padding-top: 58%;
+}
+
+.contentBox {
+	padding: 14px;
+}
+
+.name {
+	margin-bottom: 9px;
+	font-size: 1.6rem;
+}
+
+.list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.item:not(:last-of-type)::after {
+	content: '\2022';
+	margin-left: 10px;
+}

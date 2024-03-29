@@ -1,0 +1,36 @@
+.caracteristicaItem{
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 280px;
+  padding: 5px 12px;
+  border-radius: 34px;
+  background-color: var(--light-gray);
+  transition: var(--transition);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.caracteristicaItem .count {
+  padding-right: 6px;
+  padding-left: 6px;
+  font-size: 1.4rem;
+  color: var(--primary);
+  background-color: var(--light-gray);
+  border-radius: 10px;
+  transition: var(--transition);
+}
+
+.caracteristicaItem.active {
+  background-color: var(--light-green);
+  color: #fff;
+}
+
+.caracteristicaItem.active .count {
+  color: #fff;
+  background-color: var(--primary);
+}

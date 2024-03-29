@@ -1,0 +1,137 @@
+.inputBox {
+	position: relative;
+	display: inline-block;
+}
+
+.inputBox input {
+	width: 100%;
+	max-width: 100%;
+	text-align: left;
+	border: 1px solid transparent;
+	box-shadow: 0px 5px 25px #50C6820F;
+}
+
+.inputBox input:focus,
+.inputBox.notEmpty input {
+	background-color: transparent;
+}
+
+.inputBox input:focus+.materialBox label,
+.inputBox.notEmpty label {
+	top: 0;
+	font-size: 1.2rem;
+	pointer-events: none;
+}
+
+.inputBox input:focus+.materialBox legend,
+.inputBox.notEmpty legend {
+	visibility: visible;
+}
+
+.inputBox.notEmpty input:valid+.materialBox fieldset {
+	border-color: var(--primary);
+}
+
+.inputBox.error input:valid+.materialBox fieldset {
+	border-color: var(--red);
+	color: var(--red);
+}
+
+.errorInput{
+	border-color: var(--red);
+	color: var(--red);
+}
+
+.inputBox.notEmpty input:valid+.materialBox label {
+	color: var(--primary);
+}
+
+.inputBox label {
+	position: absolute;
+	top: 50%;
+	left: var(--input-padding-horizontal);
+	transform: translateY(-50%);
+	transition: var(--transition);
+	pointer-events: none;
+}
+
+.inputBox fieldset {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	min-height: 6.3rem;
+	margin: 0;
+	padding-left: calc(var(--input-padding-horizontal) - 5px);
+	border-radius: var(--border-radius);
+	border: 1px solid var(--border-color);
+	pointer-events: none;
+	transition: var(--transition);
+}
+
+.inputBox fieldset legend {
+	display: inline-block;
+	width: fit-content;
+	margin-right: auto;
+	padding-right: 0;
+	transform: translateX(-5px);
+}
+
+.inputBox input+.materialBox legend {
+	visibility: hidden;
+}
+
+.inputBox input+.materialBox span {
+	color: transparent;
+	font-size: 1.2rem;
+}
+
+.headerSelect {
+	margin: auto;
+	text-align: left;
+	max-width: 230px;
+	background: hsla(0, 0%, 100%, .1);
+	border-radius: 20px;
+	padding: 2px 15px;
+
+}
+
+.inlineFlex {
+	display: inline-flex;
+}
+
+.roundIcon {
+	width: 19px;
+	height: 19px;
+	/* UI Properties */
+	background: #FFFFFF33 0% 0% no-repeat padding-box;
+	opacity: 1;
+	border-radius: 100%;
+	padding: 5px;
+	margin-left: -18px;
+	margin-top: -1px;
+}
+
+.comboBoxHeader {
+	font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300) 16px/21px var(--unnamed-font-family-roboto);
+	letter-spacing: var(--unnamed-character-spacing-0);
+	text-align: left;
+	font: normal normal 300 16px/21px Roboto;
+	letter-spacing: 0px;
+	color: #FFFFFF;
+	opacity: 1;
+	border: none;
+	background: transparent;
+	max-width: 200px;
+}
+
+.labelComboBox {
+	font: var(--unnamed-font-style-normal) normal bold 12px/16px var(--unnamed-font-family-roboto);
+	letter-spacing: var(--unnamed-character-spacing-0);
+	text-align: left;
+	font: normal normal bold 12px/16px Roboto;
+	letter-spacing: 0px;
+	color: #FFFFFF;
+	opacity: 1;
+	display: block;
+}
