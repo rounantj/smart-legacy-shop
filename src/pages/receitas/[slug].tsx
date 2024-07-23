@@ -246,7 +246,7 @@ export default function SingleReceita({
 
         }
       ).catch(err => {
-        ////console.log(err)
+        console.log(err)
       })
 
     } catch (e) { }

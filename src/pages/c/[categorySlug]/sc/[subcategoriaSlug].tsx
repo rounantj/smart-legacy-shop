@@ -257,7 +257,7 @@ export default function Subcategoria({ products = [] }: PageProps) {
   const [totalProdutosAtivos, setTotalAtivos] = useState<number>(0)
   const [categoria, setCategoria] = useState<any>()
   async function getMyNewCategories(token: string = "") {
-    let URL = "https://loja.api-smartcomerci.com.br/categorie_find/" + process.env.AFFILIATE_ID
+    let URL = "https://api-smart-939610cb57d8.herokuapp.com/categorie_find/" + process.env.AFFILIATE_ID
     let header = {
       headers: { "x-access-token": token }
     }

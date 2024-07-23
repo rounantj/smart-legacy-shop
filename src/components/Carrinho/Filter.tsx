@@ -80,7 +80,7 @@ export default function Filter(props: CartList) {
               <div className={FilterStyle.asideIcon}>
                 {/* <Image
                   src={
-                    (getImage(cat.name)?.indexOf("https") >-1 ?getImage(cat.name) :  "https://loja.api-smartcomerci.com.br/" +getImage(cat.name))
+                    (getImage(cat.name)?.indexOf("https") >-1 ?getImage(cat.name) :  "https://api-smart-939610cb57d8.herokuapp.com/" +getImage(cat.name))
                     }
                 
                   layout="fill"
@@ -89,7 +89,7 @@ export default function Filter(props: CartList) {
 
                 <SmartImage
                   src={
-                    (getImage(cat.name)?.indexOf("https") > -1 ? getImage(cat.name) : "https://loja.api-smartcomerci.com.br/" + getImage(cat.name))
+                    (getImage(cat.name)?.indexOf("https") > -1 ? getImage(cat.name) : "https://api-smart-939610cb57d8.herokuapp.com/" + getImage(cat.name))
                   }
 
                   layout="fill"

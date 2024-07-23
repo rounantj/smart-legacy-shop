@@ -357,7 +357,7 @@ function Header(props: CARTS) {
                         {/* <Image
                           src={
 
-                            (cat.categorie_icon?.indexOf("https") > -1 ? cat.categorie_icon : "https://loja.api-smartcomerci.com.br/" + cat.categorie_icon)
+                            (cat.categorie_icon?.indexOf("https") > -1 ? cat.categorie_icon : "https://api-smart-939610cb57d8.herokuapp.com/" + cat.categorie_icon)
                           }
                           layout="fill"
                           objectFit="contain"
@@ -366,7 +366,7 @@ function Header(props: CARTS) {
                         <SmartImage
                           src={
 
-                            (cat.categorie_icon?.indexOf("https") > -1 ? cat.categorie_icon : "https://loja.api-smartcomerci.com.br/" + cat.categorie_icon)
+                            (cat.categorie_icon?.indexOf("https") > -1 ? cat.categorie_icon : "https://api-smart-939610cb57d8.herokuapp.com/" + cat.categorie_icon)
                           }
                           layout="fill"
                           objectFit="contain"

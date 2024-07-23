@@ -160,7 +160,6 @@ function Lista(props: ListaProps) {
     }
     //console.log('valor Total', valorTotal)
     setValorTotal(total)
-    start()
   }, [props.lista])
 
 

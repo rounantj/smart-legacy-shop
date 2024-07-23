@@ -38,7 +38,7 @@ export default function StartSection(props: StartSectionProps) {
 
 
     axios
-      .post("https://loja.api-smartcomerci.com.br/clientAuth", {
+      .post("https://api-smart-939610cb57d8.herokuapp.com/clientAuth", {
         mail: response.profileObj.email,
         password: response.profileObj.googleId
       })
@@ -109,7 +109,7 @@ export default function StartSection(props: StartSectionProps) {
 
             setTimeout(() => {
               axios
-                .post("https://loja.api-smartcomerci.com.br/clientAuth", {
+                .post("https://api-smart-939610cb57d8.herokuapp.com/clientAuth", {
                   mail: mail,
                   password: pass
                 })
@@ -160,7 +160,7 @@ export default function StartSection(props: StartSectionProps) {
 
             setTimeout(() => {
               axios
-                .post("https://loja.api-smartcomerci.com.br/clientAuth", {
+                .post("https://api-smart-939610cb57d8.herokuapp.com/clientAuth", {
                   mail: mail,
                   password: pass
                 })

@@ -539,7 +539,7 @@ export default function ModalCEP_VIEW(props: ModalCEPProps) {
 
 
     if (txt == null) { txt = "2" }
-    setLado(`https://loja.api-smartcomerci.com.br/pictures_ean/${txt}.png`)
+    setLado(`https://api-smart-939610cb57d8.herokuapp.com/pictures_ean/${txt}.png`)
   }, [])
 
 

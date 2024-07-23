@@ -133,7 +133,7 @@ export default function PedidoFinalizado() {
 
 
         axios
-          .post("https://loja.api-smartcomerci.com.br/clientAuth", {
+          .post("https://api-smart-939610cb57d8.herokuapp.com/clientAuth", {
             mail: email_cliente_sem_senha,
             password: newPassword
 

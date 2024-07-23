@@ -72,8 +72,8 @@ export default function ProductCardSearch(props: StaticPropsResult) {
     event: React.SyntheticEvent<HTMLImageElement, Event>
   ) => {
 
-    event.currentTarget.src = 'https://admin.api-smartcomerci.com.br/images/default/produto-sem-imagem.jpg';
-    event.currentTarget.srcset = 'https://admin.api-smartcomerci.com.br/images/default/produto-sem-imagem.jpg';
+    event.currentTarget.src = 'https://api-smart-939610cb57d8.herokuapp.com/images/default/produto-sem-imagem.jpg';
+    event.currentTarget.srcset = 'https://api-smart-939610cb57d8.herokuapp.com/images/default/produto-sem-imagem.jpg';
     event.preventDefault();
     event.stopPropagation();
   };

@@ -133,7 +133,7 @@ export default function Category({
 
 
   async function getMyNewCategories(token: string = "") {
-    let URL = "https://loja.api-smartcomerci.com.br/categorie_find/" + process.env.AFFILIATE_ID
+    let URL = "https://api-smart-939610cb57d8.herokuapp.com/categorie_find/" + process.env.AFFILIATE_ID
     let header = {
       headers: { "x-access-token": token }
     }
@@ -358,7 +358,7 @@ export default function Category({
               >
                 <CategoryButton
                   name="Todas as Subcategorias"
-                  image={categoria?.icon.indexOf("https") > -1 ? categoria?.icon : "https://admin.api-smartcomerci.com.br/assets/icons/" + categoria?.icon}
+                  image={categoria?.icon.indexOf("https") > -1 ? categoria?.icon : "https://api-smart-939610cb57d8.herokuapp.com/assets/icons/" + categoria?.icon}
                   count={totalProdutosAtivos}
                   link="/"
                   active
@@ -372,7 +372,7 @@ export default function Category({
                       <CategoryButton
                         key={sb.title}
                         name={sb.title}
-                        image={categoria?.icon.indexOf("https") > -1 ? categoria?.icon : "https://admin.api-smartcomerci.com.br/assets/icons/" + categoria?.icon}
+                        image={categoria?.icon.indexOf("https") > -1 ? categoria?.icon : "https://api-smart-939610cb57d8.herokuapp.com/assets/icons/" + categoria?.icon}
                         count={getQtd(sb.title)}
                         link={`../../../c/${categorySlug.replace(/\//, '_')}/sc/${sb.title.replace(/\//, '_')}`}
                       />
@@ -385,7 +385,7 @@ export default function Category({
                       <CategoryButton
                         key={sb.title}
                         name={sb.title}
-                        image={categoria?.icon.indexOf("https") > -1 ? categoria?.icon : "https://admin.api-smartcomerci.com.br/assets/icons/" + categoria?.icon}
+                        image={categoria?.icon.indexOf("https") > -1 ? categoria?.icon : "https://api-smart-939610cb57d8.herokuapp.com/assets/icons/" + categoria?.icon}
                         count={getQtd(sb.title)}
                         link={`../../../c/${categorySlug.replace(/\//, '_')}/sc/${sb.title.replace(/\//, '_')}`}
                       />

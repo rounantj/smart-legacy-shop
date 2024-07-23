@@ -235,7 +235,7 @@ export default function Login(props: LoginProps) {
 
 
     axios
-      .post("https://loja.api-smartcomerci.com.br/clientAuth", {
+      .post("https://api-smart-939610cb57d8.herokuapp.com/clientAuth", {
         mail: userName,
         password: pass
 
@@ -374,7 +374,7 @@ export default function Login(props: LoginProps) {
 
 
     axios
-      .post("https://loja.api-smartcomerci.com.br/clientAuth", {
+      .post("https://api-smart-939610cb57d8.herokuapp.com/clientAuth", {
         mail: response.profileObj.email,
         password: response.profileObj.googleId
       })
@@ -447,7 +447,7 @@ export default function Login(props: LoginProps) {
 
             setTimeout(() => {
               axios
-                .post("https://loja.api-smartcomerci.com.br/clientAuth", {
+                .post("https://api-smart-939610cb57d8.herokuapp.com/clientAuth", {
                   mail: mail,
                   password: pass
                 })
@@ -500,7 +500,7 @@ export default function Login(props: LoginProps) {
 
             setTimeout(() => {
               axios
-                .post("https://loja.api-smartcomerci.com.br/clientAuth", {
+                .post("https://api-smart-939610cb57d8.herokuapp.com/clientAuth", {
                   mail: mail,
                   password: pass
                 })

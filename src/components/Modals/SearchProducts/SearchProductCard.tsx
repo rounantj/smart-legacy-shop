@@ -47,7 +47,7 @@ export default function SearchProductCard(props: ProductInListaProps) {
   const imageOnErrorHandler = (
     event: React.SyntheticEvent<HTMLImageElement, Event>
   ) => {
-    event.currentTarget.src = 'https://admin.api-smartcomerci.com.br/images/default/produto-sem-imagem.jpg';
+    event.currentTarget.src = 'https://api-smart-939610cb57d8.herokuapp.com/images/default/produto-sem-imagem.jpg';
     event.currentTarget.className = "error";
   };
 
@@ -60,7 +60,7 @@ export default function SearchProductCard(props: ProductInListaProps) {
             onError={imageOnErrorHandler}
             src={
               props.product.product_thumbnail ? props.product.product_thumbnail :
-                "https://loja.api-smartcomerci.com.br/images/default/produto-sem-imagem.jpg"
+                "https://api-smart-939610cb57d8.herokuapp.com/images/default/produto-sem-imagem.jpg"
             }
             layout="fill"
             objectFit="contain"
@@ -69,7 +69,7 @@ export default function SearchProductCard(props: ProductInListaProps) {
             onError={imageOnErrorHandler}
             src={
               props.product.product_thumbnail ? props.product.product_thumbnail :
-                "https://loja.api-smartcomerci.com.br/images/default/produto-sem-imagem.jpg"
+                "https://api-smart-939610cb57d8.herokuapp.com/images/default/produto-sem-imagem.jpg"
             }
             layout="fill"
             objectFit="contain"

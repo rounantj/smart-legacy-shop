@@ -11,6 +11,7 @@ import React, { useState, useEffect } from "react";
 import { BANNER } from "@models/SubCategories";
 import { CategorieDetails } from "@models/CategorieDetails";
 import { SubCatStatus } from "@models/SubCatStatus";
+import { urlImageDecide } from "src/helpers/helpers";
 
 interface staticPropsResult {
   categoryName: string;
@@ -308,7 +309,7 @@ export default function ModalMenuItem(props: staticPropsResult) {
                         <div className={`${styles.banner}`}>
 
                           <Image
-                            src={categoryBanners.img}
+                            src={urlImageDecide(categoryBanners.img)}
                             width={221}
                             height={429}
                             layout="responsive" alt={""} />

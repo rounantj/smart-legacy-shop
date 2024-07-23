@@ -37,7 +37,7 @@ export default function AsideBar() {
   const [isToShowAll, setIsToShowAll] = useState<boolean>(false)
 
   async function getMyNewCategories(token: string = "") {
-    let URL = "https://loja.api-smartcomerci.com.br/categorie_find/" + process.env.AFFILIATE_ID
+    let URL = "https://api-smart-939610cb57d8.herokuapp.com/categorie_find/" + process.env.AFFILIATE_ID
     let header = {
       headers: { "x-access-token": token }
     }
@@ -137,7 +137,7 @@ export default function AsideBar() {
 
                         <SmartImage
                           src={
-                            (cat.icon?.indexOf("https") > -1 ? cat.icon : "https://admin.api-smartcomerci.com.br/assets/icons/" + cat.icon)
+                            (cat.icon?.indexOf("https") > -1 ? cat.icon : "https://api-smart-939610cb57d8.herokuapp.com/assets/icons/" + cat.icon)
                           }
                           layout="fill"
                           objectFit="contain"
@@ -172,7 +172,7 @@ export default function AsideBar() {
                         <SmartImage
                           src={
 
-                            (cat.icon?.indexOf("https") > -1 ? cat.icon : "https://admin.api-smartcomerci.com.br/assets/icons/" + cat.icon)
+                            (cat.icon?.indexOf("https") > -1 ? cat.icon : "https://api-smart-939610cb57d8.herokuapp.com/assets/icons/" + cat.icon)
                           }
                           layout="fill"
                           objectFit="contain"

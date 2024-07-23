@@ -59,7 +59,7 @@ export default function PIXCard(props: props2) {
     })
     const paymentOrder: ShipayPaymentCreate = {
       buyer,
-      callback_url: "https://loja.api-smartcomerci.com.br/callback_shipay",
+      callback_url: "https://api-smart-939610cb57d8.herokuapp.com/callback_shipay",
       wallet: "shipay-pagador",
       total,
       pix_dict_key: process.env.PIX_RECEBEDOR ?? "999999999999",
@@ -72,7 +72,7 @@ export default function PIXCard(props: props2) {
     }
     const token: string = tk;
     const PIX_QR_CODE: any = await Api.post(
-      "https://loja.api-smartcomerci.com.br/create_payment",
+      "https://api-smart-939610cb57d8.herokuapp.com/create_payment",
       paymentOrder,
       { headers: { "x-access-token": token } }
     );
@@ -95,7 +95,7 @@ export default function PIXCard(props: props2) {
       }
       const token: string = tk;
       const PIX_QR_CODE: any = await Api.post(
-        "https://loja.api-smartcomerci.com.br/get_payment",
+        "https://api-smart-939610cb57d8.herokuapp.com/get_payment",
         { id: orderId },
         { headers: { "x-access-token": token } }
       );

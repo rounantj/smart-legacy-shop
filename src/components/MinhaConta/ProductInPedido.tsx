@@ -52,7 +52,7 @@ export default function ProductInPedido(props: ProductInPedido) {
   const imageOnErrorHandler = (
     event: React.SyntheticEvent<HTMLImageElement, Event>
   ) => {
-    event.currentTarget.src = 'https://admin.api-smartcomerci.com.br/images/default/produto-sem-imagem.jpg';
+    event.currentTarget.src = 'https://api-smart-939610cb57d8.herokuapp.com/images/default/produto-sem-imagem.jpg';
     event.currentTarget.className = "error";
   };
 
@@ -68,7 +68,7 @@ export default function ProductInPedido(props: ProductInPedido) {
           onError={imageOnErrorHandler}
           src={props.product.product_thumbnail ? (props.product.product_thumbnail) :
             (
-              "https://loja.api-smartcomerci.com.br/images/default/produto-sem-imagem.jpg"
+              "https://api-smart-939610cb57d8.herokuapp.com/images/default/produto-sem-imagem.jpg"
             )}
           width={53}
           height={46} objectFit={"contain"} layout={"responsive"} />

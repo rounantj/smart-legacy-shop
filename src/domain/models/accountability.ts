@@ -3,7 +3,7 @@ import { Api } from "src/providers";
 
 export async function verifyAccoutability(products: any, valorTotal: number, cpfClient: string) {
     // console.log('calculando', valorTotal, cpfClient)
-    const myOffers = await Api.post('https://loja.api-smartcomerci.com.br/getById_public', {
+    const myOffers = await Api.post('https://api-smart-939610cb57d8.herokuapp.com/getById_public', {
         "table": "promocoes_cupons",
         "id_name": "affiliate_id",
         "id_value": Number(process.env.AFFILIATE_ID),

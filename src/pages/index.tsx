@@ -274,7 +274,7 @@ export default function Home() {
 
 
   const getStoreInformation = async () => {
-    await Api.post('https://erp.api-smartcomerci.com.br/getStoreInformation', { "master_id": MASTER_ID }).then(async response => {
+    await Api.post('https://api-smart-939610cb57d8.herokuapp.com/getStoreInformation', { "master_id": MASTER_ID }).then(async response => {
       setStoreInformation(response.data[0])
       set_FULL_DELIVERY_DEFAULT(ajustStrigfy(JSON.stringify(response.data)))
       localStorage.setItem("FULL_DELIVERY_DEFAULT", ajustStrigfy(JSON.stringify(response.data)));

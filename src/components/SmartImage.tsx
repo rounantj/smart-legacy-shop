@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { FC, useEffect } from "react";
+import { urlImageDecide } from "src/helpers/helpers";
 
 interface SmartImageProps {
   src: string;
@@ -34,7 +35,7 @@ const SmartImage: FC<SmartImageProps> = ({
           <Image
             className={className}
             onError={onError}
-            src={src || "https://erp.api-smartcomerci.com.br/images/default/produto-sem-imagem.jpg"}
+            src={urlImageDecide(src)}
             layout={layout}
             objectFit={objectFit}
             alt={alt}
@@ -45,7 +46,7 @@ const SmartImage: FC<SmartImageProps> = ({
             height={height ?? 100}
             className={className}
             onError={onError}
-            src={src || "https://erp.api-smartcomerci.com.br/images/default/produto-sem-imagem.jpg"}
+            src={urlImageDecide(src)}
             layout={layout}
             objectFit={objectFit}
             alt={alt}

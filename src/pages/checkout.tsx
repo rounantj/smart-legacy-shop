@@ -507,7 +507,7 @@ export default function Checkout() {
         if (txt == null) {
           txt = "0";
         }
-        Api.post("https://loja.api-smartcomerci.com.br/getById_public", {
+        Api.post("https://api-smart-939610cb57d8.herokuapp.com/getById_public", {
           table: "delivery_default",
           id_name: "affiliate_id",
           id_value: Number(process.env.AFFILIATE_ID),

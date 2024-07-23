@@ -63,7 +63,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
 
   const getStoreInformation = async () => {
-    await Api.post('https://erp.api-smartcomerci.com.br/getStoreInformation', { "master_id": MASTER_ID }).then(async response => {
+    await Api.post('https://api-smart-939610cb57d8.herokuapp.com/getStoreInformation', { "master_id": MASTER_ID }).then(async response => {
 
       setIsOk(true)
 

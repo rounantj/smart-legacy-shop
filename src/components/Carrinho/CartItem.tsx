@@ -155,7 +155,7 @@ export default function CartItem(props: CartItem) {
                 src={
                   items.product_thumbnail
                     ? items.product_thumbnail
-                    : "https://loja.api-smartcomerci.com.br/images/default/produto-sem-imagem.jpg"
+                    : "https://api-smart-939610cb57d8.herokuapp.com/images/default/produto-sem-imagem.jpg"
                 }
                 layout="fill"
                 objectFit="contain"
@@ -164,7 +164,7 @@ export default function CartItem(props: CartItem) {
                 src={
                   items.product_thumbnail
                     ? items.product_thumbnail
-                    : "https://loja.api-smartcomerci.com.br/images/default/produto-sem-imagem.jpg"
+                    : "https://api-smart-939610cb57d8.herokuapp.com/images/default/produto-sem-imagem.jpg"
                 }
                 layout="fill"
                 objectFit="contain"

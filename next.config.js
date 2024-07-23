@@ -21,11 +21,7 @@ module.exports = {
 
 module.exports = (phase) => {
   let domains = [
-    "admin.api-smartcomerci.com.br",
-    "cms.api-smartcomerci.com.br",
-    "loja.api-smartcomerci.com.br",
-    "loja.omundodasembalagens.com.br",
-    "omundodasembalagens.com.br",
+    "https://api-smart-939610cb57d8.herokuapp.com",
     "*",
     "localhost:3000",
   ];
