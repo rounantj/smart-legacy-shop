@@ -12,17 +12,17 @@ function MiniBanner(props: MiniBannerProps) {
 
   return (
     <div
-    className={` ${miniBannerStyle.miniBanner} miniBanner08`}
-    style={{ backgroundImage: `url(${props.image})` }}
-  >
-    
-    {/* <hgroup>
+      className={` ${miniBannerStyle.miniBanner} miniBanner08`}
+      style={{ backgroundImage: `url(${props.image})` }}
+    >
+
+      {/* <hgroup>
       <h3 className={miniBannerStyle.title}>{props.title}</h3>
       {props.subtitle && (
         <h4 className={miniBannerStyle.subtitle}>{props.subtitle}</h4>
       )}
     </hgroup> */}
-  </div>
+    </div>
   );
 }
 

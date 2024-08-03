@@ -15,7 +15,7 @@ import styles4 from "@styles/pages/Search.module.css";
 import { useSearchCat } from "src/hooks/useSearchCat";
 import { useProducts } from "src/hooks/useProducts";
 import { useProductsRelateds } from "src/hooks/useProductsRelateds";
-import { Api } from "src/providers";
+import { Api } from "@components/providers";
 import styles5 from "@styles/pages/404.module.css";
 import Substyles from "@styles/pages/Search.module.css";
 import { useProductInformation } from "src/hooks/useProductInformation";
@@ -257,7 +257,7 @@ export default function Subcategoria({ products = [] }: PageProps) {
   const [totalProdutosAtivos, setTotalAtivos] = useState<number>(0)
   const [categoria, setCategoria] = useState<any>()
   async function getMyNewCategories(token: string = "") {
-    let URL = "https://api-smart-939610cb57d8.herokuapp.com/categorie_find/" + process.env.AFFILIATE_ID
+    let URL = process.env.SMART_API + "/categorie_find/" + process.env.AFFILIATE_ID
     let header = {
       headers: { "x-access-token": token }
     }

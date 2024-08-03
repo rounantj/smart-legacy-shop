@@ -13,7 +13,7 @@ import Link from "next/link";
 import CategoryList from "./CategoriesContent/CategoryList";
 import { Categorie } from "@models/Categorie";
 import { SubCategories } from "@models/SubCategories";
-import { Api } from "src/providers";
+import { Api } from "@components/providers";
 import { ajustStrigfy } from "@models/masks";
 
 interface ModalProps {

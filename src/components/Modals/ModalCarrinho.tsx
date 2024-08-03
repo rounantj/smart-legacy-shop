@@ -11,7 +11,7 @@ import ModalCarrinhoStyle from "@styles/components/modals/ModalCarrinho.module.c
 import { OrderContent } from "@models/OrderContent";
 import { OrderSent } from "@models/OrderSent";
 import { ProductOrder } from "@models/ProductOrder";
-import { Api } from "src/providers";
+import { Api } from "@components/providers";
 import { useState } from "react";
 import { Order } from "@models/Order";
 import { useOrderItems } from "src/hooks/useOrdersItems";

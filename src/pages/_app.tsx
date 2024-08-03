@@ -13,7 +13,7 @@ config.autoAddCss = false;
 import LoadingBar from 'react-top-loading-bar'
 import { ProductOrder } from "@models/ProductOrder";
 import { Cart } from "@models/Cart";
-import { Api } from "src/providers";
+import { Api } from "@components/providers";
 import { Product2 } from "@models/Product2";
 import { ajustStrigfy, FULL_PRICES } from "@models/masks";
 
@@ -63,7 +63,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
 
   const getStoreInformation = async () => {
-    await Api.post('https://api-smart-939610cb57d8.herokuapp.com/getStoreInformation', { "master_id": MASTER_ID }).then(async response => {
+    await Api.post(`/getStoreInformation`, { "master_id": MASTER_ID }).then(async response => {
 
       setIsOk(true)
 

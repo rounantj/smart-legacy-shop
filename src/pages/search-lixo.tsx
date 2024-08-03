@@ -17,7 +17,7 @@ import { ProductOrder } from "@models/ProductOrder";
 import { Cart } from "@models/Cart";
 import { Product2 } from "@models/Product2";
 import { useState, useEffect } from "react";
-import { Api } from "src/providers";
+import { Api } from "@components/providers";
 
 import styles from "@styles/pages/Search.module.css";
 import CategoryBox from "@components/CategoryBox";
@@ -46,22 +46,22 @@ export default function Search() {
   //("CART HEADER :(");
   //(carts);
 
-  function caseA(text: string){ 
-    var list = text.split(" "), newText = "" 
-    for(const k in list){
-      var word = list[k].split(""), counter = 0, newWord = "" 
-      for(const u  in word){
-        if(counter === 0){
-          if(word[u] != ""){
-            newWord+= word[u].toUpperCase()
+  function caseA(text: string) {
+    var list = text.split(" "), newText = ""
+    for (const k in list) {
+      var word = list[k].split(""), counter = 0, newWord = ""
+      for (const u in word) {
+        if (counter === 0) {
+          if (word[u] != "") {
+            newWord += word[u].toUpperCase()
           }
         }
-        else{
-            newWord+= word[u].toLowerCase()
-          }
-        counter ++
-      } 
-      newText+= newWord+" " 
+        else {
+          newWord += word[u].toLowerCase()
+        }
+        counter++
+      }
+      newText += newWord + " "
     }
     return newText
   }
@@ -101,7 +101,7 @@ export default function Search() {
   }, [setCarts]);
 
   function changeProductCode(number: number, relactedsProducts: []) {
-    window.document.getElementById('scrollTop')?.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+    window.document.getElementById('scrollTop')?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
     setProductCode(number);
     setProductsRelateds(relactedsProducts);
     setModal();
@@ -244,7 +244,7 @@ export default function Search() {
     setSubcategoryMenuSelected(item_selected);
   }
 
-	return (
+  return (
     <LayoutDefault
       noCarrinho={undefined}
       detail={null}
@@ -266,38 +266,34 @@ export default function Search() {
           <div className={styles.content}>
             <nav className={styles.subcategoryMenu}>
               <button
-                className={`${styles.subcategoryMenuItem} ${
-                  subcategoryMenuSelected === "Categorias" ? styles.active : ""
-                }`}
+                className={`${styles.subcategoryMenuItem} ${subcategoryMenuSelected === "Categorias" ? styles.active : ""
+                  }`}
                 onClick={() => subcategoryMenuClick("Categorias")}
               >
                 Categorias
               </button>
 
               <button
-                className={`${styles.subcategoryMenuItem} ${
-                  subcategoryMenuSelected === "Marcas" ? styles.active : ""
-                }`}
+                className={`${styles.subcategoryMenuItem} ${subcategoryMenuSelected === "Marcas" ? styles.active : ""
+                  }`}
                 onClick={() => subcategoryMenuClick("Marcas")}
               >
                 Marcas
               </button>
 
               <button
-                className={`${styles.subcategoryMenuItem} ${
-                  subcategoryMenuSelected === "Preço" ? styles.active : ""
-                }`}
+                className={`${styles.subcategoryMenuItem} ${subcategoryMenuSelected === "Preço" ? styles.active : ""
+                  }`}
                 onClick={() => subcategoryMenuClick("Preço")}
               >
                 Preço
               </button>
 
               <button
-                className={`${styles.subcategoryMenuItem} ${
-                  subcategoryMenuSelected === "Características"
+                className={`${styles.subcategoryMenuItem} ${subcategoryMenuSelected === "Características"
                     ? styles.active
                     : ""
-                }`}
+                  }`}
                 onClick={() => subcategoryMenuClick("Características")}
               >
                 Características
@@ -306,13 +302,13 @@ export default function Search() {
           </div>
 
           {subcategoryMenuSelected === "Categorias" ? (
-            <CategoryBox    />
+            <CategoryBox />
           ) : subcategoryMenuSelected === "Marcas" ? (
-            <MarcasBox setView={undefined} src={[]}/>
+            <MarcasBox setView={undefined} src={[]} />
           ) : subcategoryMenuSelected === "Preço" ? (
-            <PriceBox   setShow={undefined} />
+            <PriceBox setShow={undefined} />
           ) : (
-            <CaracteristicasBox  setView={undefined}  src={[]}/>
+            <CaracteristicasBox setView={undefined} src={[]} />
           )}
         </div>
 
@@ -333,7 +329,7 @@ export default function Search() {
                     <option value="popularidade">Maior Preço</option>
                     <option value="popularidade">Nome A-Z</option>
                     <option value="popularidade">Nome Z-A</option>
-             
+
                   </select>
                 </div>
               </div>

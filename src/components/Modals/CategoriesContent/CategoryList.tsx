@@ -10,7 +10,7 @@ import FrutasIcon from "@assets/icons/Categorias/Frutas";
 import styles from "@styles/components/modals/CategoryContent/CategoryList.module.css";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Api } from "src/providers";
+import { Api } from "@components/providers";
 import Modal from "../Modal";
 import headerStyle from "@styles/components/Header.module.css";
 

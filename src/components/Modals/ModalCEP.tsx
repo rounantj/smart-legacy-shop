@@ -7,7 +7,7 @@ import UserAddress from "@components/Checkout/UserAddress";
 import { MetodoEntrega } from "@models/MetodoEntrega";
 import { Affiliate } from "@models/Affiliate";
 import { Horarios } from "@models/Horarios";
-import { Api } from "src/providers";
+import { Api } from "@components/providers";
 import { Enderecos } from "@models/Enderecos";
 import { ajustStrigfy, isMyArea } from "@models/masks";
 import MdCep from "./MdCep";
@@ -539,7 +539,7 @@ export default function ModalCEP_VIEW(props: ModalCEPProps) {
 
 
     if (txt == null) { txt = "2" }
-    setLado(`https://api-smart-939610cb57d8.herokuapp.com/pictures_ean/${txt}.png`)
+    setLado(`${process.env.SMART_API}/pictures_ean/${txt}.png`)
   }, [])
 
 

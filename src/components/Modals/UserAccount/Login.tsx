@@ -6,8 +6,8 @@ import InputText from "@components/Inputs/InputText";
 import AccountFlowStyle from "@styles/components/modals/AccountFlow.module.css";
 import AcctounFlowStyle from "@styles/components/modals/AccountFlow.module.css";
 import { Cliente } from "@models/Cliente";
-import { useLocalStorage } from "src/providers/useLocalStorage";
-import { Api } from "src/providers";
+import { useLocalStorage } from "@components/providers/useLocalStorage";
+import { Api } from "@components/providers";
 import { ajustStrigfy, validarEmailString } from "@models/masks";
 import { AppContext } from "src/pages/_app";
 import { Cart } from "@models/Cart";
@@ -235,7 +235,7 @@ export default function Login(props: LoginProps) {
 
 
     axios
-      .post("https://api-smart-939610cb57d8.herokuapp.com/clientAuth", {
+      .post(process.env.SMART_API + "/clientAuth", {
         mail: userName,
         password: pass
 
@@ -374,7 +374,7 @@ export default function Login(props: LoginProps) {
 
 
     axios
-      .post("https://api-smart-939610cb57d8.herokuapp.com/clientAuth", {
+      .post(process.env.SMART_API + "/clientAuth", {
         mail: response.profileObj.email,
         password: response.profileObj.googleId
       })
@@ -447,7 +447,7 @@ export default function Login(props: LoginProps) {
 
             setTimeout(() => {
               axios
-                .post("https://api-smart-939610cb57d8.herokuapp.com/clientAuth", {
+                .post(process.env.SMART_API + "/clientAuth", {
                   mail: mail,
                   password: pass
                 })
@@ -500,7 +500,7 @@ export default function Login(props: LoginProps) {
 
             setTimeout(() => {
               axios
-                .post("https://api-smart-939610cb57d8.herokuapp.com/clientAuth", {
+                .post(process.env.SMART_API + "/clientAuth", {
                   mail: mail,
                   password: pass
                 })

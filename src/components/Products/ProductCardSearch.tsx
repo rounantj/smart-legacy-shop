@@ -6,7 +6,7 @@ import FavoriteIcon from "@assets/icons/FavoriteIcon";
 import WishlistIcon from "@assets/icons/WishlistIcon";
 import React from "react";
 import ProductCardFooter from "@components/Footer/ProductCardFooter";
-import { Api } from "src/providers";
+import { Api } from "@components/providers";
 import { ajustStrigfy, FULL_PRICES } from "@models/masks";
 import SmartImage from "@components/SmartImage";
 import { AppContext } from "src/pages/_app";
@@ -72,8 +72,8 @@ export default function ProductCardSearch(props: StaticPropsResult) {
     event: React.SyntheticEvent<HTMLImageElement, Event>
   ) => {
 
-    event.currentTarget.src = 'https://api-smart-939610cb57d8.herokuapp.com/images/default/produto-sem-imagem.jpg';
-    event.currentTarget.srcset = 'https://api-smart-939610cb57d8.herokuapp.com/images/default/produto-sem-imagem.jpg';
+    event.currentTarget.src = 'https://smart-images.nyc3.digitaloceanspaces.com/produto-sem-imagem.jpg';
+    event.currentTarget.srcset = 'https://smart-images.nyc3.digitaloceanspaces.com/produto-sem-imagem.jpg';
     event.preventDefault();
     event.stopPropagation();
   };

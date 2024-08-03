@@ -23,7 +23,7 @@ import FrutasIcon from "@assets/icons/Categorias/Frutas";
 import headerStyle from "@styles/components/Header.module.css";
 import React from "react";
 
-import { Api } from "src/providers";
+import { Api } from "@components/providers";
 
 import { Cart } from "@models/Cart";
 import CartIcon from "@assets/icons/CartIcon";
@@ -354,19 +354,10 @@ function Header(props: CARTS) {
                     <span className={headerStyle.category}>
                       <i className={`${headerStyle.categoryIcon} ${headerStyle.asideIcon}`}>
 
-                        {/* <Image
-                          src={
-
-                            (cat.categorie_icon?.indexOf("https") > -1 ? cat.categorie_icon : "https://api-smart-939610cb57d8.herokuapp.com/" + cat.categorie_icon)
-                          }
-                          layout="fill"
-                          objectFit="contain"
-                        /> */}
-
                         <SmartImage
                           src={
 
-                            (cat.categorie_icon?.indexOf("https") > -1 ? cat.categorie_icon : "https://api-smart-939610cb57d8.herokuapp.com/" + cat.categorie_icon)
+                            (process.env.URL_IMAGES + "/" + cat.categorie_icon)
                           }
                           layout="fill"
                           objectFit="contain"

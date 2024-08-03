@@ -9,7 +9,7 @@ import { ProductOrder } from "@models/ProductOrder";
 import { useState } from "react";
 
 import Button from "@components/Buttons/Button";
-import { Api } from "src/providers";
+import { Api } from "@components/providers";
 import Link from "next/link";
 import { Selecao } from "@models/Selecao";
 import CartIcon from "@assets/icons/CartIcon";

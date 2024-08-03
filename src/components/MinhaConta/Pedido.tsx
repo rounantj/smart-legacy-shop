@@ -17,7 +17,7 @@ import { OrderContent } from "@models/OrderContent";
 import React, { useContext, useEffect, useState } from "react";
 import { OrderSent } from "@models/OrderSent";
 
-import { Api } from "src/providers";
+import { Api } from "@components/providers";
 import { ProductOrder } from "@models/ProductOrder";
 import { AppContext } from "src/pages/_app";
 import { ajustStrigfy } from "@models/masks";

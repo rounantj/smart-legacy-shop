@@ -11,7 +11,7 @@ import Ingrediente from "@components/Receitas/Ingrediente";
 import { ProductOrder } from "@models/ProductOrder";
 import { Cart } from "@models/Cart";
 import { Product2 } from "@models/Product2";
-import { Api } from "src/providers";
+import { Api } from "@components/providers";
 import ReactPlayer from 'react-player'
 import styles from "@styles/pages/SingleReceita.module.css";
 import ProductCardList from "@components/Products/ProductCardList";

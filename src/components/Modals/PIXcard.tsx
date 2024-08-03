@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 import Skeleton from "@mui/material/Skeleton";
 import moment from "moment";
 import { BUYER, shipayItems, ShipayPaymentCreate } from "@models/Product2";
-import { Api } from "src/providers";
+import { Api } from "@components/providers";
 
 import { Grid } from "@mui/material";
 import SmartImage from "@components/SmartImage";
@@ -59,7 +59,7 @@ export default function PIXCard(props: props2) {
     })
     const paymentOrder: ShipayPaymentCreate = {
       buyer,
-      callback_url: "https://api-smart-939610cb57d8.herokuapp.com/callback_shipay",
+      callback_url: process.env.SMART_API + "/callback_shipay",
       wallet: "shipay-pagador",
       total,
       pix_dict_key: process.env.PIX_RECEBEDOR ?? "999999999999",
@@ -72,7 +72,7 @@ export default function PIXCard(props: props2) {
     }
     const token: string = tk;
     const PIX_QR_CODE: any = await Api.post(
-      "https://api-smart-939610cb57d8.herokuapp.com/create_payment",
+      process.env.SMART_API + "/create_payment",
       paymentOrder,
       { headers: { "x-access-token": token } }
     );
@@ -95,7 +95,7 @@ export default function PIXCard(props: props2) {
       }
       const token: string = tk;
       const PIX_QR_CODE: any = await Api.post(
-        "https://api-smart-939610cb57d8.herokuapp.com/get_payment",
+        process.env.SMART_API + "/get_payment",
         { id: orderId },
         { headers: { "x-access-token": token } }
       );

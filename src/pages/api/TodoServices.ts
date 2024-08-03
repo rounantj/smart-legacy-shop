@@ -3,7 +3,7 @@ import { Order } from "@models/Order"
 import { Product } from "@models/Product"
 import { Product2 } from "@models/Product2"
 
-import { Api } from "src/providers"
+import { Api } from "@components/providers"
 import { useState } from "react";
 import { OrderSent } from "@models/OrderSent"
 import { ProductOrder } from "@models/ProductOrder"
@@ -21,7 +21,7 @@ const getMyCart = (AFFILIATE_ID: number, clientId: number, myToken: string) => A
 const getAllProducts = (AFFILIATE_ID: number, lastID: number) => Api.post<Product2[]>('/showProducts', { affiliate_id: AFFILIATE_ID, lastID: lastID, totalItems: 6 })
 const getProductsSearchCat = (AFFILIATE_ID: number, lastID: number, limit: number, text: string) => Api.post<Product2[]>('/productSearchCat', { product_affiliate_id: AFFILIATE_ID, product_site_name: text, product_code: text, lastID: lastID, totalItems: limit })
 const getProductsSearchCat2 = (AFFILIATE_ID: number, lastID: number, limit: number, text: string) => Api.post<Product2[]>('/productSearchCat2', { product_affiliate_id: AFFILIATE_ID, product_site_name: text, product_code: text, lastID: lastID, totalItems: limit })
-const getProductsSearch = (AFFILIATE_ID: number, lastID: number, limit: number, text: string) => Api.post<Product2[]>('/productSearchSite', { product_affiliate_id: AFFILIATE_ID, product_site_name: text, product_code: text, lastID: lastID, totalItems: limit }, {headers:{"Content-Type":"application/json"}})
+const getProductsSearch = (AFFILIATE_ID: number, lastID: number, limit: number, text: string) => Api.post<Product2[]>('/productSearchSite', { product_affiliate_id: AFFILIATE_ID, product_site_name: text, product_code: text, lastID: lastID, totalItems: limit }, { headers: { "Content-Type": "application/json" } })
 
 const getAllRelatedProducts = (AFFILIATE_ID: number, number: number[]) => Api.post<Product2[]>('/listaIds', { product_list_ids: number, affiliate_id: affID })
 const getAllOrderItems = (AFFILIATE_ID: number, items: OrderSent[]) => Api.post<ProductOrder[]>('/getAllOrderItems', { product_list_ids: items, affiliate_id: AFFILIATE_ID })

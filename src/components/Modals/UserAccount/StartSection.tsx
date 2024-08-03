@@ -2,7 +2,7 @@ import { useState } from "react";
 import AccountFlowStyle from "@styles/components/modals/AccountFlow.module.css";
 import { Cliente } from "@models/Cliente";
 import axios from "axios";
-import { Api } from "src/providers";
+import { Api } from "@components/providers";
 import MobileModalCloseButton from "@assets/icons/MobileModalCloseButton";
 import { ajustStrigfy } from "@models/masks";
 
@@ -38,7 +38,7 @@ export default function StartSection(props: StartSectionProps) {
 
 
     axios
-      .post("https://api-smart-939610cb57d8.herokuapp.com/clientAuth", {
+      .post(process.env.SMART_API + "/clientAuth", {
         mail: response.profileObj.email,
         password: response.profileObj.googleId
       })
@@ -109,7 +109,7 @@ export default function StartSection(props: StartSectionProps) {
 
             setTimeout(() => {
               axios
-                .post("https://api-smart-939610cb57d8.herokuapp.com/clientAuth", {
+                .post(process.env.SMART_API + "/clientAuth", {
                   mail: mail,
                   password: pass
                 })
@@ -160,7 +160,7 @@ export default function StartSection(props: StartSectionProps) {
 
             setTimeout(() => {
               axios
-                .post("https://api-smart-939610cb57d8.herokuapp.com/clientAuth", {
+                .post(process.env.SMART_API + "/clientAuth", {
                   mail: mail,
                   password: pass
                 })

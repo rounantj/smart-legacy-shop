@@ -8,7 +8,7 @@ import Loja from "@components/Loja";
 import styles2 from "@styles/pages/404.module.css";
 import Link from "next/link";
 
-import { Api } from "src/providers";
+import { Api } from "@components/providers";
 import { ProductOrder } from "@models/ProductOrder";
 import { Cart } from "@models/Cart";
 import { Product2 } from "@models/Product2";

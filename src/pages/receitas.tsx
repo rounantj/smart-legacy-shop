@@ -9,7 +9,7 @@ import { ProductOrder } from "@models/ProductOrder";
 import { Cart } from "@models/Cart";
 import { Product2 } from "@models/Product2";
 import { useState, useEffect } from "react";
-import { Api } from "src/providers";
+import { Api } from "@components/providers";
 import React from "react";
 import { useProductInformation } from "src/hooks/useProductInformation";
 import { useProducts } from "src/hooks/useProducts";

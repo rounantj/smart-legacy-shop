@@ -45,7 +45,7 @@ export default function BoxUserAccount(props: Open) {
 
 
     if (txt == null) { txt = "2" }
-    setLado(`https://api-smart-939610cb57d8.herokuapp.com/pictures_ean/${txt}.png`)
+    setLado(`${process.env.SMART_API}/pictures_ean/${txt}.png`)
   }, [])
 
   return (
@@ -65,7 +65,7 @@ export default function BoxUserAccount(props: Open) {
           <div className={AccountFlowStyle.containerInner}>
             <div className={AccountFlowStyle.boxLogo}>
               {/* <Image
-              src="https://api-smart-939610cb57d8.herokuapp.com/images/1/log04.png"
+              src=process.env.SMART_API+"/images/1/log04.png"
               width={150}
               height={54}
             /> */}

@@ -37,7 +37,7 @@ export default function ProductInSearch(props: ProductInListaProps) {
   const imageOnErrorHandler = (
     event: React.SyntheticEvent<HTMLImageElement, Event>
   ) => {
-    event.currentTarget.src = 'https://api-smart-939610cb57d8.herokuapp.com/images/default/produto-sem-imagem.jpg';
+    event.currentTarget.src = 'https://smart-images.nyc3.digitaloceanspaces.com/produto-sem-imagem.jpg';
     event.currentTarget.className = "error";
   };
 
@@ -53,7 +53,7 @@ export default function ProductInSearch(props: ProductInListaProps) {
           onError={imageOnErrorHandler}
           src={props.product.product_thumbnail ? (props.product.product_thumbnail) :
             (
-              "https://api-smart-939610cb57d8.herokuapp.com/images/default/produto-sem-imagem.jpg"
+              "https://smart-images.nyc3.digitaloceanspaces.com/produto-sem-imagem.jpg"
             )} width={74} height={64} objectFit={"contain"} layout={"responsive"} />
       </div>
       <div>

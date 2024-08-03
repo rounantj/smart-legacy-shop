@@ -4,12 +4,12 @@ import Button from "@components/Buttons/Button";
 import ModalPassword from "@components/Modals/ModalPassword";
 import InputText from "@components/Inputs/InputText";
 
-import { useLocalStorage } from "src/providers/useLocalStorage";
+import { useLocalStorage } from "@components/providers/useLocalStorage";
 import styles2 from "@styles/components/minha-conta/Tabs.module.css";
 import styles from "@styles/components/minha-conta/EditarDados.module.css";
 import AcctounFlowStyle from "@styles/components/modals/AccountFlow.module.css";
 import { Cliente } from "@models/Cliente";
-import { Api } from "src/providers";
+import { Api } from "@components/providers";
 import { ajustStrigfy, cepMask, cpfMask2, isCNPJ, isCPF, isMyArea, validarEmail, validarEmailString, validarEmailText } from "@models/masks";
 import LoadingSpinner from "@components/Spinner";
 

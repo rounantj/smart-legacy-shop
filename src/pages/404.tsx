@@ -16,10 +16,10 @@ import React from "react";
 import { Cart } from "@models/Cart";
 import { Product2 } from "@models/Product2";
 import { ProductOrder } from "@models/ProductOrder";
-import { Api } from "src/providers";
+import { Api } from "@components/providers";
 import { useProductInformation } from "src/hooks/useProductInformation";
 
-import { useLocalStorage } from "src/providers/useLocalStorage";
+import { useLocalStorage } from "@components/providers/useLocalStorage";
 import { useSearch } from "src/hooks/useSearch";
 
 import styles4 from "@styles/pages/Search.module.css";
@@ -59,7 +59,7 @@ export default function page404() {
   const [state, setState] = useLocalStorage("Ronan");
 
   function changeProductCode(number: number, relactedsProducts: []) {
-    window.document.getElementById('scrollTop')?.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+    window.document.getElementById('scrollTop')?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
     setProductCode(number);
     setProductsRelateds(relactedsProducts);
     setModal();
@@ -152,7 +152,7 @@ export default function page404() {
                 cart_valor_total: response.data[0].cart_valor_total,
                 cart_client_id: response.data[0].cart_client_id,
               };
-              
+
               var otherPRD: ProductOrder[] = JSON.parse(
                 ajustStrigfy(response.data[0].cart_conteudo)
               );
@@ -439,7 +439,7 @@ export default function page404() {
       }
     }
 
-    
+
   }
   React.useEffect(() => {
     localStorage.setItem("listShow", "0")
@@ -551,7 +551,7 @@ export default function page404() {
     }
   }
   function setCartOnLocalStorage(products: ProductOrder[]) {
-    var AFFILIATE_ID: number = Number( process.env.AFFILIATE_ID);
+    var AFFILIATE_ID: number = Number(process.env.AFFILIATE_ID);
     var total: number = 0;
     for (const k in products) {
       total += products[k].product_valor * products[k].quantidade;
@@ -626,7 +626,7 @@ export default function page404() {
   useEffect(() => { }, [setTotal]);
 
   React.useEffect(() => {
-    var AFFILIATE_ID: number = Number( process.env.AFFILIATE_ID);
+    var AFFILIATE_ID: number = Number(process.env.AFFILIATE_ID);
     getAllInformation(AFFILIATE_ID, productCode);
     tasks2.map((pr: Product2) => {
       setPrd(pr);
@@ -637,7 +637,7 @@ export default function page404() {
 
   React.useEffect(() => {
     setSearchValue(decodeURI(window.location.search.substring(1)));
-    var AFFILIATE_ID: number = Number( process.env.AFFILIATE_ID);
+    var AFFILIATE_ID: number = Number(process.env.AFFILIATE_ID);
 
     getSearch(
       AFFILIATE_ID,

@@ -8,7 +8,7 @@ import CheckoutItem from "./CheckoutItem";
 import { ProductOrder } from "@models/ProductOrder";
 import { Cart } from "@models/Cart";
 import { Product2 } from "@models/Product2";
-import { Api } from "src/providers";
+import { Api } from "@components/providers";
 
 interface CheckoutList {
   products: ProductOrder[];

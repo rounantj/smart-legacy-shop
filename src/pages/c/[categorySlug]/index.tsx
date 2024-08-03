@@ -10,7 +10,7 @@ import { Product2 } from "@models/Product2";
 
 import { useProductsRelateds } from "src/hooks/useProductsRelateds";
 import { useProductInformation } from "src/hooks/useProductInformation";
-import { Api } from "src/providers";
+import { Api } from "@components/providers";
 
 import Substyles from "@styles/pages/Search.module.css";
 import styles from "@styles/pages/Category.module.css";
@@ -133,7 +133,7 @@ export default function Category({
 
 
   async function getMyNewCategories(token: string = "") {
-    let URL = "https://api-smart-939610cb57d8.herokuapp.com/categorie_find/" + process.env.AFFILIATE_ID
+    let URL = process.env.SMART_API + "/categorie_find/" + process.env.AFFILIATE_ID
     let header = {
       headers: { "x-access-token": token }
     }
@@ -358,7 +358,7 @@ export default function Category({
               >
                 <CategoryButton
                   name="Todas as Subcategorias"
-                  image={categoria?.icon.indexOf("https") > -1 ? categoria?.icon : "https://api-smart-939610cb57d8.herokuapp.com/assets/icons/" + categoria?.icon}
+                  image={categoria?.icon.indexOf("https") > -1 ? categoria?.icon : process.env.SMART_API + "/assets/icons/" + categoria?.icon}
                   count={totalProdutosAtivos}
                   link="/"
                   active
@@ -372,7 +372,7 @@ export default function Category({
                       <CategoryButton
                         key={sb.title}
                         name={sb.title}
-                        image={categoria?.icon.indexOf("https") > -1 ? categoria?.icon : "https://api-smart-939610cb57d8.herokuapp.com/assets/icons/" + categoria?.icon}
+                        image={categoria?.icon.indexOf("https") > -1 ? categoria?.icon : process.env.SMART_API + "/assets/icons/" + categoria?.icon}
                         count={getQtd(sb.title)}
                         link={`../../../c/${categorySlug.replace(/\//, '_')}/sc/${sb.title.replace(/\//, '_')}`}
                       />
@@ -385,7 +385,7 @@ export default function Category({
                       <CategoryButton
                         key={sb.title}
                         name={sb.title}
-                        image={categoria?.icon.indexOf("https") > -1 ? categoria?.icon : "https://api-smart-939610cb57d8.herokuapp.com/assets/icons/" + categoria?.icon}
+                        image={categoria?.icon.indexOf("https") > -1 ? categoria?.icon : process.env.SMART_API + "/assets/icons/" + categoria?.icon}
                         count={getQtd(sb.title)}
                         link={`../../../c/${categorySlug.replace(/\//, '_')}/sc/${sb.title.replace(/\//, '_')}`}
                       />

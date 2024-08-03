@@ -20,7 +20,7 @@ export default function CheckoutItem(props: CheckoutItem) {
   const imageOnErrorHandler = (
     event: React.SyntheticEvent<HTMLImageElement, Event>
   ) => {
-    event.currentTarget.src = 'https://api-smart-939610cb57d8.herokuapp.com/images/default/produto-sem-imagem.jpg';
+    event.currentTarget.src = 'https://smart-images.nyc3.digitaloceanspaces.com/produto-sem-imagem.jpg';
     event.currentTarget.className = "error";
   };
 
@@ -42,7 +42,7 @@ export default function CheckoutItem(props: CheckoutItem) {
           src={
             props.product.product_thumbnail
               ? props.product.product_thumbnail
-              : "https://api-smart-939610cb57d8.herokuapp.com/images/default/produto-sem-imagem.jpg"
+              : "https://smart-images.nyc3.digitaloceanspaces.com/produto-sem-imagem.jpg"
           }
           layout="fill"
           objectFit="contain"
@@ -56,7 +56,7 @@ export default function CheckoutItem(props: CheckoutItem) {
               src={
                 props.product.product_thumbnail
                   ? props.product.product_thumbnail
-                  : "https://api-smart-939610cb57d8.herokuapp.com/images/default/produto-sem-imagem.jpg"
+                  : "https://smart-images.nyc3.digitaloceanspaces.com/produto-sem-imagem.jpg"
               }
               layout="fill"
               objectFit="contain"
@@ -64,7 +64,7 @@ export default function CheckoutItem(props: CheckoutItem) {
             :
             <SmartImage
               onError={imageOnErrorHandler}
-              src={"https://api-smart-939610cb57d8.herokuapp.com/images/default/produto-sem-imagem.jpg"}
+              src={"https://smart-images.nyc3.digitaloceanspaces.com/produto-sem-imagem.jpg"}
               layout="fill"
               objectFit="contain"
             />

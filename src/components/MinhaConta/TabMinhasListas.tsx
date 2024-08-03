@@ -2,7 +2,7 @@ import styles from "@styles/components/minha-conta/Tabs.module.css";
 import Lista from "@components/MinhaConta/Lista";
 import { LISTA_COMPRA } from "@models/Product2";
 import { useContext, useEffect, useState } from "react";
-import { Api } from "src/providers";
+import { Api } from "@components/providers";
 import { AppContext } from "src/pages/_app";
 import { ajustStrigfy } from "@models/masks";
 

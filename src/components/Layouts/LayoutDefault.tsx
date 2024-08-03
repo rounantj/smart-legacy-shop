@@ -5,7 +5,7 @@ import Footer from "@components/Footer/Footer";
 import AsideBar from "@components/AsideBar/asideBar";
 import styles from "@styles/components/layouts/Layout.module.css";
 import { useEffect, useMemo, useState } from "react";
-import { Api } from "src/providers";
+import { Api } from "@components/providers";
 import { Cart } from "@models/Cart";
 import { ProductOrder } from "@models/ProductOrder";
 import { ajustStrigfy } from "@models/masks";

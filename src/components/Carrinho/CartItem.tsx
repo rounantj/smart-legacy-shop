@@ -155,7 +155,7 @@ export default function CartItem(props: CartItem) {
                 src={
                   items.product_thumbnail
                     ? items.product_thumbnail
-                    : "https://api-smart-939610cb57d8.herokuapp.com/images/default/produto-sem-imagem.jpg"
+                    : "https://smart-images.nyc3.digitaloceanspaces.com/produto-sem-imagem.jpg"
                 }
                 layout="fill"
                 objectFit="contain"
@@ -164,7 +164,7 @@ export default function CartItem(props: CartItem) {
                 src={
                   items.product_thumbnail
                     ? items.product_thumbnail
-                    : "https://api-smart-939610cb57d8.herokuapp.com/images/default/produto-sem-imagem.jpg"
+                    : "https://smart-images.nyc3.digitaloceanspaces.com/produto-sem-imagem.jpg"
                 }
                 layout="fill"
                 objectFit="contain"

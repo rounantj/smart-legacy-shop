@@ -9,7 +9,7 @@ import styles from "@styles/components/minha-conta/Lista.module.css";
 import { LISTA_COMPRA, Product2 } from "@models/Product2";
 import { useContext, useEffect, useState } from "react";
 import { ajustStrigfy, FULL_PRICES } from "@models/masks";
-import { Api } from "src/providers";
+import { Api } from "@components/providers";
 import { ProductOrder } from "@models/ProductOrder";
 import { AppContext } from "src/pages/_app";
 

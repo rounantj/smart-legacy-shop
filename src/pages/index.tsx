@@ -12,7 +12,7 @@ import React from "react";
 import { useProducts } from "src/hooks/useProducts";
 import { useProductsRelateds } from "src/hooks/useProductsRelateds";
 import { useProductInformation } from "src/hooks/useProductInformation";
-import { Api } from "src/providers";
+import { Api } from "@components/providers";
 import TruckIcon from "@assets/icons/Truck";
 import styles2 from "@styles/components/Newsletter.module.css";
 import ModalCEP_VIEW from "@components/Modals/ModalCEP";
@@ -274,7 +274,7 @@ export default function Home() {
 
 
   const getStoreInformation = async () => {
-    await Api.post('https://api-smart-939610cb57d8.herokuapp.com/getStoreInformation', { "master_id": MASTER_ID }).then(async response => {
+    await Api.post(`/getStoreInformation`, { "master_id": MASTER_ID }).then(async response => {
       setStoreInformation(response.data[0])
       set_FULL_DELIVERY_DEFAULT(ajustStrigfy(JSON.stringify(response.data)))
       localStorage.setItem("FULL_DELIVERY_DEFAULT", ajustStrigfy(JSON.stringify(response.data)));
@@ -542,7 +542,7 @@ export default function Home() {
               {bannerPrincipal != '' ?
                 <SmartImage
                   className="border15"
-                  src={bannerPrincipal}
+                  src={process.env.URL_IMAGES + bannerPrincipal}
                   layout="responsive"
                   width={872}
                   height={269} objectFit={"contain"} />
@@ -566,7 +566,7 @@ export default function Home() {
                 {mini1 != '' ?
                   <SmartImage
                     className="border15"
-                    src={mini1}
+                    src={process.env.URL_IMAGES + mini1}
                     layout="responsive"
                     isMiniBanner={true}
                     objectFit="contain"
@@ -590,7 +590,7 @@ export default function Home() {
                 {mini2 != '' ?
                   <SmartImage
                     className="border15"
-                    src={mini2}
+                    src={process.env.URL_IMAGES + mini2}
                     layout="responsive"
                     isMiniBanner={true}
                     objectFit="contain"
@@ -614,7 +614,7 @@ export default function Home() {
                 {mini3 != '' ?
                   <SmartImage
                     className="border15"
-                    src={mini3}
+                    src={process.env.URL_IMAGES + mini3}
                     layout="responsive"
                     objectFit="contain"
                     isMiniBanner={true}
@@ -639,7 +639,7 @@ export default function Home() {
                 {min4 != '' ?
                   <SmartImage
                     className="border15"
-                    src={min4}
+                    src={process.env.URL_IMAGES + min4}
                     layout="responsive"
                     isMiniBanner={true}
                     objectFit="contain"
@@ -679,7 +679,7 @@ export default function Home() {
             {bannerComoFunciona != '' ?
               <SmartImage
                 className="border15"
-                src={bannerComoFunciona}
+                src={process.env.URL_IMAGES + bannerComoFunciona}
                 layout="responsive"
                 objectFit="contain"
               />
@@ -746,7 +746,7 @@ export default function Home() {
                           hme.first && hme.first.url != null ?
                             <SmartImage
                               className="border15"
-                              src={hme.first.url}
+                              src={process.env.URL_IMAGES + hme.first.url}
                               layout="fill"
                               objectFit="contain"
                             />
@@ -766,7 +766,7 @@ export default function Home() {
                           hme.second && hme.second.url != null ?
                             <SmartImage
                               className="border15"
-                              src={hme.second.url}
+                              src={process.env.URL_IMAGES + hme.second.url}
                               layout="fill"
                               objectFit="contain"
                             />

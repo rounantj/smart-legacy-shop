@@ -9,7 +9,7 @@ import axios from "axios";
 import { Cliente } from "@models/Cliente";
 import { isEmail, validarEmailString } from "@models/masks";
 import { text } from "@fortawesome/fontawesome-svg-core";
-import { Api } from "src/providers";
+import { Api } from "@components/providers";
 
 interface StartSectionProps {
   onClickEntrar: (

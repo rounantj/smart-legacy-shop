@@ -9,13 +9,13 @@ import styles from "@styles/pages/MinhaConta.module.css";
 
 import { Cliente } from "@models/Cliente";
 import React from "react";
-import { useLocalStorage } from "src/providers/useLocalStorage";
+import { useLocalStorage } from "@components/providers/useLocalStorage";
 import ProductInPedidoList from "@components/MinhaConta/ProductInPedidoList";
 import { Order } from "@models/Order";
 import Modal from "@components/Modals/Modal";
 import BoxUserAccount from "@components/Modals/UserAccount/BoxUserAccount";
 
-import { Api } from "src/providers";
+import { Api } from "@components/providers";
 import PedidosIcon from "@assets/icons/Pedidos";
 import ListIcon from "@assets/icons/List";
 

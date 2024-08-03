@@ -3,7 +3,7 @@ import { text } from "@fortawesome/fontawesome-svg-core";
 import axios from "axios";
 import React, { useContext } from "react";
 import { AppContext } from "src/pages/_app";
-import { Api } from "src/providers";
+import { Api } from "@components/providers";
 import { Product2, PRODUTO_FINAL, VENDA } from "./Product2";
 
 export function mphone(e: React.FormEvent<HTMLInputElement>) {

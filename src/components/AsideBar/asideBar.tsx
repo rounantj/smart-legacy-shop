@@ -9,7 +9,7 @@ import AllCategoriesIcon from "@assets/icons/Categorias/AllCategories";
 import styles from "@styles/components/AsideBar.module.css";
 import { useTodo } from "src/hooks/useTodo";
 
-import { Api } from "src/providers";
+import { Api } from "@components/providers";
 import SmartImage from "@components/SmartImage";
 import { ajustStrigfy } from "@models/masks";
 import { AppContext } from "src/pages/_app";
@@ -37,7 +37,7 @@ export default function AsideBar() {
   const [isToShowAll, setIsToShowAll] = useState<boolean>(false)
 
   async function getMyNewCategories(token: string = "") {
-    let URL = "https://api-smart-939610cb57d8.herokuapp.com/categorie_find/" + process.env.AFFILIATE_ID
+    let URL = process.env.SMART_API + "/categorie_find/" + process.env.AFFILIATE_ID
     let header = {
       headers: { "x-access-token": token }
     }
@@ -137,7 +137,7 @@ export default function AsideBar() {
 
                         <SmartImage
                           src={
-                            (cat.icon?.indexOf("https") > -1 ? cat.icon : "https://api-smart-939610cb57d8.herokuapp.com/assets/icons/" + cat.icon)
+                            (process.env.URL_IMAGES + "/" + cat.icon)
                           }
                           layout="fill"
                           objectFit="contain"
@@ -172,7 +172,7 @@ export default function AsideBar() {
                         <SmartImage
                           src={
 
-                            (cat.icon?.indexOf("https") > -1 ? cat.icon : "https://api-smart-939610cb57d8.herokuapp.com/assets/icons/" + cat.icon)
+                            (process.env.URL_IMAGES + "/" + cat.icon)
                           }
                           layout="fill"
                           objectFit="contain"

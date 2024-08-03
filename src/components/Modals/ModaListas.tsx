@@ -6,7 +6,7 @@ import ModalStyle from "@styles/components/modals/Modal.module.css";
 import styles from "@styles/components/modals/ModalListas.module.css";
 import { LISTA_COMPRA, Product2 } from "@models/Product2";
 import { useContext, useEffect, useState } from "react";
-import { Api } from "src/providers";
+import { Api } from "@components/providers";
 import InputText from "@components/Inputs/InputText";
 import Button from "@components/Buttons/Button";
 import styles4 from "@styles/components/minha-conta/Lista.module.css";

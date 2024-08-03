@@ -4,7 +4,8 @@ import https from "https";
 axios.defaults.httpAgent = new https.Agent({
   rejectUnauthorized: false,
 });
+
+console.log({ urlP: process.env.SMART_API })
 export const Api = axios.create({
-  baseURL: "https://api-smart-939610cb57d8.herokuapp.com",
-  //baseURL:'http://147.182.128.186'
+  baseURL: process.env.SMART_API,
 });

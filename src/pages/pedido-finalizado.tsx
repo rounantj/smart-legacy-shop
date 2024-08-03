@@ -25,8 +25,8 @@ import { useProducts1 } from "src/hooks/useProducts1";
 import { useProducts2 } from "src/hooks/useProducts2";
 import { useProducts3 } from "src/hooks/useProducts3";
 import { useProductsRelateds } from "src/hooks/useProductsRelateds";
-import { Api } from "src/providers";
-import { useLocalStorage } from "src/providers/useLocalStorage";
+import { Api } from "@components/providers";
+import { useLocalStorage } from "@components/providers/useLocalStorage";
 import UsersIcon from "@assets/icons/Users";
 import PedidosIcon from "@assets/icons/Pedidos";
 import { Order } from "@models/Order";
@@ -133,7 +133,7 @@ export default function PedidoFinalizado() {
 
 
         axios
-          .post("https://api-smart-939610cb57d8.herokuapp.com/clientAuth", {
+          .post(process.env.SMART_API + "/clientAuth", {
             mail: email_cliente_sem_senha,
             password: newPassword
 

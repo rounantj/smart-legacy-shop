@@ -7,7 +7,7 @@ import styles from "@styles/components/minha-conta/ProductInLista.module.css"
 import ProductInLista from "@components/MinhaConta/ProductInLista";
 import { ProductOrder } from "@models/ProductOrder";
 import { LISTA_COMPRA, Product2 } from "@models/Product2";
-import { Api } from "src/providers";
+import { Api } from "@components/providers";
 import { ajustStrigfy } from "@models/masks";
 
 interface ProductListInListaProps {

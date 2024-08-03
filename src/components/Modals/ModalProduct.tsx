@@ -19,7 +19,7 @@ import UnityIcon from "@assets/icons/UnityIcon";
 import image from "next/image";
 import { useProductInformation } from "src/hooks/useProductInformation";
 import { useRef, useState } from "react";
-import { Api } from "src/providers";
+import { Api } from "@components/providers";
 import ArrowDown from "@assets/icons/ArrowDown";
 import CartIconB from "@assets/icons/CartIconB";
 import { ajustStrigfy, FULL_PRICES, setProductToList } from "@models/masks";
@@ -78,10 +78,10 @@ export default function ModalProduct(props: ModalProductProps) {
   function alteraIMG(fotos: string) {
     let thisImage: string = fotos
       ? fotos
-      : "https://api-smart-939610cb57d8.herokuapp.com/" + fotos;
+      : process.env.SMART_API + "/" + fotos;
     if (thisImage.indexOf("http") > -1) {
     } else {
-      thisImage = "https://api-smart-939610cb57d8.herokuapp.com/" + fotos;
+      thisImage = process.env.SMART_API + "/" + fotos;
     }
     setImageShow(thisImage);
 
@@ -132,10 +132,10 @@ export default function ModalProduct(props: ModalProductProps) {
 
 
     let imgS =
-      "https://api-smart-939610cb57d8.herokuapp.com/images/default/produto-sem-imagem.jpg";
+      "https://smart-images.nyc3.digitaloceanspaces.com/produto-sem-imagem.jpg";
     imgS = props.productDetails[0]?.product_thumbnail
       ? props.productDetails[0]?.product_thumbnail
-      : "https://api-smart-939610cb57d8.herokuapp.com/images/default/produto-sem-imagem.jpg";
+      : "https://smart-images.nyc3.digitaloceanspaces.com/produto-sem-imagem.jpg";
     setImageShow(imgS);
 
     let N = "";
@@ -167,10 +167,10 @@ export default function ModalProduct(props: ModalProductProps) {
   React.useEffect(() => {
 
     let imgS =
-      "https://api-smart-939610cb57d8.herokuapp.com/images/default/produto-sem-imagem.jpg";
+      "https://smart-images.nyc3.digitaloceanspaces.com/produto-sem-imagem.jpg";
     imgS = produto[0]?.product_thumbnail
       ? produto[0]?.product_thumbnail
-      : "https://api-smart-939610cb57d8.herokuapp.com/images/default/produto-sem-imagem.jpg";
+      : "https://smart-images.nyc3.digitaloceanspaces.com/produto-sem-imagem.jpg";
     setImageShow(imgS);
 
     let PRODUTO: Product2 = {
@@ -305,8 +305,8 @@ export default function ModalProduct(props: ModalProductProps) {
     event: React.SyntheticEvent<HTMLImageElement, Event>
   ) => {
 
-    event.currentTarget.src = 'https://api-smart-939610cb57d8.herokuapp.com/images/default/produto-sem-imagem.jpg';
-    event.currentTarget.srcset = 'https://api-smart-939610cb57d8.herokuapp.com/images/default/produto-sem-imagem.jpg';
+    event.currentTarget.src = 'https://smart-images.nyc3.digitaloceanspaces.com/produto-sem-imagem.jpg';
+    event.currentTarget.srcset = 'https://smart-images.nyc3.digitaloceanspaces.com/produto-sem-imagem.jpg';
     event.preventDefault();
     event.stopPropagation();
     //event.currentTarget.className = "error";
@@ -481,7 +481,7 @@ export default function ModalProduct(props: ModalProductProps) {
                               imagens.map(
                                 (fotos: string, index) =>
                                   imageShow ==
-                                    "https://api-smart-939610cb57d8.herokuapp.com/" +
+                                    process.env.SMART_API + "/" +
                                     fotos || imageShow == fotos ? (
                                     <div
                                       onClick={() => alteraIMG(fotos)}
@@ -493,7 +493,7 @@ export default function ModalProduct(props: ModalProductProps) {
                                         key={Math.random()}
                                         className="boxFoto"
                                         onError={imageOnErrorHandler}
-                                        src={"https://api-smart-939610cb57d8.herokuapp.com/" + fotos}
+                                        src={process.env.SMART_API + "/" + fotos}
                                         layout="fill"
                                         objectFit="contain"
                                       />
@@ -509,7 +509,7 @@ export default function ModalProduct(props: ModalProductProps) {
                                       <SmartImage
                                         className="boxFoto"
                                         onError={imageOnErrorHandler}
-                                        src={"https://api-smart-939610cb57d8.herokuapp.com/" + fotos}
+                                        src={process.env.SMART_API + "/" + fotos}
                                         layout="fill"
                                         objectFit="contain"
                                       />

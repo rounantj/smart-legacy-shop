@@ -55,7 +55,7 @@ export default function Category(props: MAP) {
 								{/* <Image
 									src={
 
-										(props.categoria.categorie_icon.indexOf("https") > -1 ? props.categoria.categorie_icon : "https://api-smart-939610cb57d8.herokuapp.com/" + props.categoria.categorie_icon)
+										(props.categoria.categorie_icon.indexOf("https") > -1 ? props.categoria.categorie_icon : process.env.SMART_API+"/" + props.categoria.categorie_icon)
 									}
 									layout="fill"
 									objectFit="contain"
@@ -64,7 +64,7 @@ export default function Category(props: MAP) {
 								<SmartImage
 									src={
 
-										(props.categoria.categorie_icon.indexOf("https") > -1 ? props.categoria.categorie_icon : "https://api-smart-939610cb57d8.herokuapp.com/" + props.categoria.categorie_icon)
+										(props.categoria.categorie_icon.indexOf("https") > -1 ? props.categoria.categorie_icon : process.env.SMART_API + "/" + props.categoria.categorie_icon)
 									}
 									layout="fill"
 									objectFit="contain"
@@ -103,7 +103,7 @@ export default function Category(props: MAP) {
 									{/* <Image
 										src={
 
-											(props.categoria.categorie_icon.indexOf("https") > -1 ? props.categoria.categorie_icon : "https://api-smart-939610cb57d8.herokuapp.com/" + props.categoria.categorie_icon)
+											(props.categoria.categorie_icon.indexOf("https") > -1 ? props.categoria.categorie_icon : process.env.SMART_API+"/" + props.categoria.categorie_icon)
 										}
 										layout="fill"
 										objectFit="contain"
@@ -112,7 +112,7 @@ export default function Category(props: MAP) {
 									<SmartImage
 										src={
 
-											(props.categoria.categorie_icon.indexOf("https") > -1 ? props.categoria.categorie_icon : "https://api-smart-939610cb57d8.herokuapp.com/" + props.categoria.categorie_icon)
+											(props.categoria.categorie_icon.indexOf("https") > -1 ? props.categoria.categorie_icon : process.env.SMART_API + "/" + props.categoria.categorie_icon)
 										}
 										layout="fill"
 										objectFit="contain"

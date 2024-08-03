@@ -26,7 +26,7 @@ import EloIcon from "@assets/icons/EloIcon";
 import { Affiliate } from "@models/Affiliate";
 import { shipayItems } from "@models/Product2";
 import React from "react";
-import { Api } from "src/providers";
+import { Api } from "@components/providers";
 
 import styles2 from "@styles/components/checkout/loja.module.css";
 import moment from "moment";
@@ -507,7 +507,7 @@ export default function Checkout() {
         if (txt == null) {
           txt = "0";
         }
-        Api.post("https://api-smart-939610cb57d8.herokuapp.com/getById_public", {
+        Api.post(process.env.SMART_API + "/getById_public", {
           table: "delivery_default",
           id_name: "affiliate_id",
           id_value: Number(process.env.AFFILIATE_ID),
