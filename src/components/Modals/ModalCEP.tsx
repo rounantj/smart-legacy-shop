@@ -539,7 +539,7 @@ export default function ModalCEP_VIEW(props: ModalCEPProps) {
 
 
     if (txt == null) { txt = "2" }
-    setLado(`${process.env.SMART_API}/pictures_ean/${txt}.png`)
+    setLado(`${process.env.SMART_API}/${txt}.png`)
   }, [])
 
 

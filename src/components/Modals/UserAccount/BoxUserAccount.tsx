@@ -45,7 +45,7 @@ export default function BoxUserAccount(props: Open) {
 
 
     if (txt == null) { txt = "2" }
-    setLado(`${process.env.SMART_API}/pictures_ean/${txt}.png`)
+    setLado(`${process.env.SMART_API}/${txt}.png`)
   }, [])
 
   return (
