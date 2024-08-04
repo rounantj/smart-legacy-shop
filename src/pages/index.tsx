@@ -542,7 +542,7 @@ export default function Home() {
               {bannerPrincipal != '' ?
                 <SmartImage
                   className="border15"
-                  src={process.env.URL_IMAGES + bannerPrincipal}
+                  src={bannerPrincipal}
                   layout="responsive"
                   width={872}
                   height={269} objectFit={"contain"} />
@@ -566,7 +566,7 @@ export default function Home() {
                 {mini1 != '' ?
                   <SmartImage
                     className="border15"
-                    src={process.env.URL_IMAGES + mini1}
+                    src={mini1}
                     layout="responsive"
                     isMiniBanner={true}
                     objectFit="contain"
@@ -590,7 +590,7 @@ export default function Home() {
                 {mini2 != '' ?
                   <SmartImage
                     className="border15"
-                    src={process.env.URL_IMAGES + mini2}
+                    src={mini2}
                     layout="responsive"
                     isMiniBanner={true}
                     objectFit="contain"
@@ -614,7 +614,7 @@ export default function Home() {
                 {mini3 != '' ?
                   <SmartImage
                     className="border15"
-                    src={process.env.URL_IMAGES + mini3}
+                    src={mini3}
                     layout="responsive"
                     objectFit="contain"
                     isMiniBanner={true}
@@ -639,7 +639,7 @@ export default function Home() {
                 {min4 != '' ?
                   <SmartImage
                     className="border15"
-                    src={process.env.URL_IMAGES + min4}
+                    src={min4}
                     layout="responsive"
                     isMiniBanner={true}
                     objectFit="contain"
@@ -679,7 +679,7 @@ export default function Home() {
             {bannerComoFunciona != '' ?
               <SmartImage
                 className="border15"
-                src={process.env.URL_IMAGES + bannerComoFunciona}
+                src={bannerComoFunciona}
                 layout="responsive"
                 objectFit="contain"
               />
@@ -746,7 +746,7 @@ export default function Home() {
                           hme.first && hme.first.url != null ?
                             <SmartImage
                               className="border15"
-                              src={process.env.URL_IMAGES + hme.first.url}
+                              src={hme.first.url}
                               layout="fill"
                               objectFit="contain"
                             />
@@ -766,7 +766,7 @@ export default function Home() {
                           hme.second && hme.second.url != null ?
                             <SmartImage
                               className="border15"
-                              src={process.env.URL_IMAGES + hme.second.url}
+                              src={hme.second.url}
                               layout="fill"
                               objectFit="contain"
                             />

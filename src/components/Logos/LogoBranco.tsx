@@ -34,7 +34,7 @@ export default function LogoBranco() {
 		if (ESSA_LOJA) {
 			try {
 				let homePage: any = JSON.parse(ESSA_LOJA.home_main_info)
-				setImageLogo(process.env.URL_IMAGES + homePage.logotipo.url)
+				setImageLogo(homePage.logotipo.url)
 			} catch (err) {
 				//console.log(err)
 			}
@@ -43,7 +43,7 @@ export default function LogoBranco() {
 
 			try {
 				let homePage: any = JSON.parse(FULL_DATA[0].home_main_info)
-				setImageLogo(process.env.URL_IMAGES + homePage.logotipo.url)
+				setImageLogo(homePage.logotipo.url)
 			} catch (err) {
 				//console.log(err)
 			}
